@@ -1,21 +1,23 @@
 import java.lang.Math;
 
 public class Trip {
-    private String departureCity;
-    private String arrivalCity;
+    private City departureCity;
+    private City arrivalCity;
     private int distance;
 
     // Constructeur
-    public Trip(String departureCity, String arrivalCity, int distance) {
+    public Trip(City departureCity, City arrivalCity, int distance) {
+        // qd on aura des coordonnes changer le param distance en une méthode getDistance qui calculera la d selon les coord.
+        // les
         this.departureCity = departureCity;
         this.arrivalCity = arrivalCity;
         this.distance = distance;
     }
 
-    public String getDepartureCity() {
+    public City getDepartureCity() {
         return departureCity;
     }
-    public String getArrivalCity() {
+    public City getArrivalCity() {
         return arrivalCity;
     }
     public int getDistance() {
