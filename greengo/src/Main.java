@@ -15,13 +15,29 @@ public class Main {
 
 
     public static void main(String[] args) {
-        for (int i=0; i<3; i++) {
-            System.out.println(groupOfTravelers[i].getLivingCity().getName());
-        };
+        getLowestCO2Destination(groupOfTravelers);
     }
 
 
-    public static HashMap<City,Integer> getLowestCO2Destination( ArrayList<Travelers> groupOfTravelers) {
+    public static HashMap<City,Integer> getLowestCO2Destination(Travelers [] groupOfTravelers) {
+        HashMap<City,Integer> SumC02PerDestination = new HashMap<>();
+        SumC02PerDestination.put(nantes, 0);
+        SumC02PerDestination.put(lyon, 0);
+        SumC02PerDestination.put(paris, 0);
+
+        // for each traveller get the C02 emission for each destination
+        for (int i = 0;i < 3; i++) {
+            HashMap<City,Integer> CO2PerCity = new HashMap<>();
+            CO2PerCity = groupOfTravelers[i].getCO2PerDestination();
+            CO2PerCity.forEach((key, value) -> System.out.println(key.getName() + " = " + value));
+            System.out.println(CO2PerCity.get(lyon));
+            // forEach pour hashmap
+            CO2PerCity.forEach((city, CO2) -> SumC02PerDestination.put(city, SumC02PerDestination.get(city) + CO2));
+        }
+        System.out.println(SumC02PerDestination.get(lyon));
+        // for each destination calculate the global C02 emissions
+
+        // return the lowest CO2 emission destination & the value
         HashMap<City,Integer> result = new HashMap<>();
         result.put(Main.paris, 300);
         return result;

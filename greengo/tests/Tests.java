@@ -25,12 +25,12 @@ public class Tests {
         co2PerCity.put(Main.paris, 106);
         Assert.assertEquals(co2PerCity,travelersTest.getCO2PerDestination());
     }
-    /*@Test
+    @Test
     // fonction: pour chaque destination faire la somme des emissions de CO2 de tous les voyageurs & retourner la destination la + économe en C02
     public void getLowestCO2DestinationTest() {
         HashMap<City,Integer> result = new HashMap<>();
         result.put(Main.paris, 300);
-        Assert.asserEquals(result, Main.getLowestCO2Destination(Main.groupOfTravelers));
+        Assert.assertEquals(result, Main.getLowestCO2Destination(Main.groupOfTravelers));
 
-    }*/
+    }
 }
