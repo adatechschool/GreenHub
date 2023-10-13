@@ -19,6 +19,8 @@ public class Tests {
         /*create the travelers instance for test*/
         Travelers travelersTest = new Travelers(Main.nantes, 1);
         Assert.assertTrue(153 == travelersTest.getCO2PerDestination().get(Main.lyon));
+        Travelers travelersTest2 = new Travelers(Main.nantes, 2);
+        Assert.assertTrue(306 == travelersTest2.getCO2PerDestination().get(Main.lyon));
     }
     @Test
     // fonction: pour chaque destination faire la somme des emissions de CO2 de tous les voyageurs & retourner la destination la + économe en C02

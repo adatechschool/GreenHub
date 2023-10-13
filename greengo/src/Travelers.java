@@ -27,7 +27,7 @@ public class Travelers {
         /*get possible destinations*/
         for (Trip trip: Main.allTrips) {
             if (this.livingCity == trip.getDepartureCity()) {
-                co2PerCity.put(trip.getArrivalCity(), trip.getCO2());
+                co2PerCity.put(trip.getArrivalCity(), trip.getCO2()*this.numberOfTravelers);
             }
         }
         return co2PerCity;
