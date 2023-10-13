@@ -5,6 +5,8 @@ public class Trip {
     private City arrivalCity;
     private int distance;
 
+    private String modeOfTransport;
+
     // Constructeur
     public Trip(City departureCity, City arrivalCity, int distance) {
         // qd on aura des coordonnes changer le param distance en une méthode getDistance qui calculera la d selon les coord.
