@@ -11,4 +11,8 @@ public class City {
         this.x = x;
         this.y = y;
     }
+
+    public String getName() {
+        return this.name;
+    }
 }

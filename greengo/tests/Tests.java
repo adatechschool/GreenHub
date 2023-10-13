@@ -1,5 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.lang.reflect.Array;
 import java.util.Dictionary;
 import java.util.HashMap;
 import java.util.*;
@@ -23,12 +25,12 @@ public class Tests {
         co2PerCity.put(Main.paris, 106);
         Assert.assertEquals(co2PerCity,travelersTest.getCO2PerDestination());
     }
-
+    /*@Test
     // fonction: pour chaque destination faire la somme des emissions de CO2 de tous les voyageurs & retourner la destination la + économe en C02
-    public void getLowestCO2Destination() {
-        // pour 1 voyageur calculer les émissions de CO2 pour chaque destinations
-        // entrée: un voyageur
-        // parcourir la liste des destinations qui co
+    public void getLowestCO2DestinationTest() {
+        HashMap<City,Integer> result = new HashMap<>();
+        result.put(Main.paris, 300);
+        Assert.asserEquals(result, Main.getLowestCO2Destination(Main.groupOfTravelers));
 
-    }
+    }*/
 }
