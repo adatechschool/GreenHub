@@ -11,9 +11,21 @@ public class Tests {
     public void getCO2Test() {
         City Nantes = new City("Nantes", 0, 0);
         City Lyon = new City("Lyon", 0, 0);
-        Trip myTrip = new Trip(Nantes,Lyon,538);
-        Assert.assertEquals(myTrip.getCO2(), 153);
+
+        ModeOfTransport plane = new Plane();
+        Trip myTrip1 = new Trip(Nantes,Lyon,538, plane);
+        Assert.assertEquals(myTrip1.getCO2(), 153);
+
+        ModeOfTransport train = new Train();
+        Trip myTrip2 = new Trip(Nantes,Lyon,538, train);
+        Assert.assertEquals(myTrip2.getCO2(), 2);
+
+        ModeOfTransport car = new Car();
+        Trip myTrip3 = new Trip(Nantes,Lyon,538, car);
+        Assert.assertEquals(myTrip3.getCO2(), 116);
     }
+
+
     @Test
     public void getCO2PerDestinationTest() {
         /*create the travelers instance for test*/

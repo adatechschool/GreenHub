@@ -27,6 +27,11 @@ public class Trip {
         return distance;
     }
 
+    public ModeOfTransport getModeOfTransport() {
+        return this.modeOfTransport;
+    }
+
+
     public int getCO2 (){
         return Math.round(this.distance * this.modeOfTransport.getCO2PerKilometer() / 1000);
     };
