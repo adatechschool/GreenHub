@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -154,14 +155,14 @@ public class Main {
 
     /*public static Travelers groupOfTravelers[] = {traveler1,traveler2,traveler3,traveler4,traveler5};*/
 
-
+    static private int minCO2 = 10000;
 
     public static void main(String[] args) {
 
     }
 
 
-    public static Entry<City,Integer> getLowestCO2Destination(Travelers [] groupOfTravelers) {
+    public static void getLowestCO2Destination(Travelers [] groupOfTravelers) {
         //instancier pour chaque voyageur l'ensemble des trip possibles et les stocker
 
         //calculer co2 pour chaque destination
@@ -173,14 +174,25 @@ public class Main {
             }
         }
 
+
         for (City destination : allCities) {
-            for (Travelers traveler : groupOfTravelers) {
-                //calculer CO2 pour chaque mode de transport
-                combinations.get(traveler);
+            for (Travelers member : groupOfTravelers) {
+                HashMap< Travelers, Trip> tempoCombination = new HashMap<>();
+                combinations.forEach((traveler,trip) -> {
+                    if (trip.getArrivalCity() == destination && traveler == member) {
+                        tempoCombination.put(traveler, trip);
+                    }
+                });
+
+                tempoCombination.forEach((traveler, trip) -> {
+                    if (trip.getCO2() < minCO2) {
+                        minCO2 = trip.getCO2();
+                    }
+                });
             }
         }
         //renvoyer destination avec le co2 minimum
-    }
+
        /* //Create a hashmap to store the global CO2 emission per destination
         HashMap<City,Integer> SumC02PerDestination = new HashMap<>();
         for (City city : allCities){
