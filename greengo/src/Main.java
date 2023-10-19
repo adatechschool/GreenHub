@@ -162,6 +162,26 @@ public class Main {
 
 
     public static Entry<City,Integer> getLowestCO2Destination(Travelers [] groupOfTravelers) {
+        //instancier pour chaque voyageur l'ensemble des trip possibles et les stocker
+
+        //calculer co2 pour chaque destination
+        //faire une boucle sur les voyageurs
+        HashMap<Travelers,Trip> combinations = new HashMap<>();
+        for (Travelers traveler : groupOfTravelers) {
+            for (Trip trip : traveler.getPossibleTrips()) {
+                combinations.put(traveler,trip);
+            }
+        }
+
+        for (City destination : allCities) {
+            for (Travelers traveler : groupOfTravelers) {
+                //calculer CO2 pour chaque mode de transport
+                combinations.get(traveler);
+            }
+        }
+        //renvoyer destination avec le co2 minimum
+    }
+       /* //Create a hashmap to store the global CO2 emission per destination
         HashMap<City,Integer> SumC02PerDestination = new HashMap<>();
         for (City city : allCities){
             SumC02PerDestination.put(city, 0);
@@ -179,5 +199,5 @@ public class Main {
         Entry<City,Integer>  entryWithMinValue = Collections.min(SumC02PerDestination.entrySet(), Map.Entry.comparingByValue());
         System.out.println("Clé : " + entryWithMinValue.getKey().getName() + ", Valeur : " + entryWithMinValue.getValue());
         return entryWithMinValue;
-    }
+    }*/
 }

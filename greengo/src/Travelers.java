@@ -21,20 +21,17 @@ public class Travelers {
         return numberOfTravelers;
     }
 
-    public HashMap<City, Integer> getCO2PerDestination () {
-        /*database of possible destinations*/
-        //Create a dictionary to store the key value / pair : city / co2
-        HashMap<City, Integer> co2PerCity = new HashMap<>();
-        /*get possible destinations*/
+    public ArrayList<Trip> getPossibleTrips () {
+        //Create an arraylist to store the possible destinations
+        ArrayList<Trip> possibleTrips = new ArrayList<>();
+        //get possible destinations
         for (Trip trip: Main.allTrips) {
             if (this.livingCity == trip.getDepartureCity()) {
-                if (Objects.equals(trip.getModeOfTransport().getTransportName(), "Car")) {
-                    co2PerCity.put(trip.getArrivalCity(), trip.getCO2());
-                }
-                else co2PerCity.put(trip.getArrivalCity(), trip.getCO2() * this.numberOfTravelers);
+                    possibleTrips.add(trip);
             }
         }
-        // {{Paris, Plane, 300},{Nantes, Car, 100}}
-        return co2PerCity;
+        //return the arraylist
+        return possibleTrips;
         }
 }
+
