@@ -22,7 +22,7 @@ public class Travelers {
 
     public HashMap<City, Integer> getCO2PerDestination () {
         /*database of possible destinations*/
-        //Create a dictionnary to store the key value / pair : city / co2
+        //Create a dictionary to store the key value / pair : city / co2
         HashMap<City, Integer> co2PerCity = new HashMap<>();
         /*get possible destinations*/
         for (Trip trip: Main.allTrips) {

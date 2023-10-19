@@ -15,43 +15,47 @@ public class Main {
 
     /*-----------------*/
 
-    public static Trip trip1 = new Trip(nantes,nantes,0);
-    public static Trip trip2 = new Trip(nantes,lyon,538);
-    public static Trip trip3 = new Trip(nantes,paris,372);
-    public static Trip trip4 = new Trip(nantes,bordeaux,267);
-    public static Trip trip5 = new Trip(nantes,toulouse,455);
+    public static ModeOfTransport modeOfTransport = new Plane();
 
     /*-----------------*/
 
-    public static Trip trip6 = new Trip(lyon,nantes,538);
-    public static Trip trip7 = new Trip(lyon,lyon,0);
-    public static Trip trip8 = new Trip(lyon,paris,412);
-    public static Trip trip9 = new Trip(lyon,bordeaux,465);
-    public static Trip trip10 = new Trip(lyon,toulouse,375);
-
-
-    /*-----------------*/
-    public static Trip trip11 = new Trip(paris,nantes,372);
-    public static Trip trip12 = new Trip(paris,lyon,412);
-    public static Trip trip13 = new Trip(paris,paris,0);
-    public static Trip trip14 = new Trip(paris,bordeaux,526);
-    public static Trip trip15 = new Trip(paris,toulouse,604);
+    public static Trip trip1 = new Trip(nantes,nantes,0, modeOfTransport);
+    public static Trip trip2 = new Trip(nantes,lyon,538, modeOfTransport);
+    public static Trip trip3 = new Trip(nantes,paris,372, modeOfTransport);
+    public static Trip trip4 = new Trip(nantes,bordeaux,267, modeOfTransport);
+    public static Trip trip5 = new Trip(nantes,toulouse,455, modeOfTransport);
 
     /*-----------------*/
 
-    public static Trip trip16 = new Trip(bordeaux,nantes,267);
-    public static Trip trip17 = new Trip(bordeaux,lyon,465);
-    public static Trip trip18 = new Trip(bordeaux,paris,526);
-    public static Trip trip19 = new Trip(bordeaux,toulouse,213);
-    public static Trip trip20 = new Trip(bordeaux,bordeaux,0);
+    public static Trip trip6 = new Trip(lyon,nantes,538, modeOfTransport);
+    public static Trip trip7 = new Trip(lyon,lyon,0, modeOfTransport);
+    public static Trip trip8 = new Trip(lyon,paris,412, modeOfTransport);
+    public static Trip trip9 = new Trip(lyon,bordeaux,465, modeOfTransport);
+    public static Trip trip10 = new Trip(lyon,toulouse,375, modeOfTransport);
+
+
+    /*-----------------*/
+    public static Trip trip11 = new Trip(paris,nantes,372, modeOfTransport);
+    public static Trip trip12 = new Trip(paris,lyon,412, modeOfTransport);
+    public static Trip trip13 = new Trip(paris,paris,0, modeOfTransport);
+    public static Trip trip14 = new Trip(paris,bordeaux,526, modeOfTransport);
+    public static Trip trip15 = new Trip(paris,toulouse,604, modeOfTransport);
 
     /*-----------------*/
 
-    public static Trip trip21 = new Trip(toulouse,paris,604);
-    public static Trip trip22 = new Trip(toulouse,nantes,455);
-    public static Trip trip23 = new Trip(toulouse,lyon,375);
-    public static Trip trip24 = new Trip(toulouse,toulouse,0);
-    public static Trip trip25 = new Trip(toulouse,bordeaux,213);
+    public static Trip trip16 = new Trip(bordeaux,nantes,267, modeOfTransport);
+    public static Trip trip17 = new Trip(bordeaux,lyon,465, modeOfTransport);
+    public static Trip trip18 = new Trip(bordeaux,paris,526, modeOfTransport);
+    public static Trip trip19 = new Trip(bordeaux,toulouse,213, modeOfTransport);
+    public static Trip trip20 = new Trip(bordeaux,bordeaux,0, modeOfTransport);
+
+    /*-----------------*/
+
+    public static Trip trip21 = new Trip(toulouse,paris,604, modeOfTransport);
+    public static Trip trip22 = new Trip(toulouse,nantes,455, modeOfTransport);
+    public static Trip trip23 = new Trip(toulouse,lyon,375, modeOfTransport);
+    public static Trip trip24 = new Trip(toulouse,toulouse,0, modeOfTransport);
+    public static Trip trip25 = new Trip(toulouse,bordeaux,213, modeOfTransport);
 
 
     public static Trip allTrips[] = {trip1,trip2,trip3,trip4,trip5,trip6,trip7,trip8,trip9,trip10,trip11,trip12,trip13,trip14,trip15,trip16,trip17,trip18,trip19,trip20,trip21,trip22,trip23,trip24,trip25};
