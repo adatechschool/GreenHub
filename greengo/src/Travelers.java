@@ -5,16 +5,22 @@ import java.util.Objects;
 
 
 public class Travelers {
+
+    private String travelersName;
     private City livingCity;
     private int numberOfTravelers;
 
 
     // Constructeur
-    public Travelers(City livingCity,int numberOfTravelers) {
+    public Travelers(String travelersName, City livingCity,int numberOfTravelers) {
+        this.travelersName = travelersName;
         this.livingCity = livingCity;
         this.numberOfTravelers = numberOfTravelers;
     }
 
+    public String getName() {
+        return travelersName;
+    }
     public City getLivingCity() {
         return livingCity;
     }

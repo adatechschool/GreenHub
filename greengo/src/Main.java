@@ -145,11 +145,11 @@ public class Main {
             tripCar1,tripCar2,tripCar3,tripCar4,tripCar5,tripCar6,tripCar7,tripCar8,tripCar9,tripCar10,tripCar11,tripCar12,tripCar13,tripCar14,tripCar15,tripCar16,tripCar17,tripCar18,tripCar19,tripCar20,tripCar21,tripCar22,tripCar23,tripCar24,tripCar25,
             tripTrain1,tripTrain2,tripTrain3,tripTrain4,tripTrain5,tripTrain6,tripTrain7,tripTrain8,tripTrain9,tripTrain10,tripTrain11,tripTrain12,tripTrain13,tripTrain14,tripTrain15,tripTrain16,tripTrain17,tripTrain18,tripTrain19,tripTrain20,tripTrain21,tripTrain22,tripTrain23,tripTrain24,tripTrain25};
 
-    public static Travelers traveler1 = new Travelers(nantes,4);
-    public static Travelers traveler2 = new Travelers(lyon,3);
-    public static Travelers traveler3 = new Travelers(paris,4);
-    public static Travelers traveler4 = new Travelers(bordeaux,2);
-    public static Travelers traveler5 = new Travelers(toulouse,3);
+    public static Travelers traveler1 = new Travelers("Nantais", nantes,4);
+    public static Travelers traveler2 = new Travelers("Lyonnais",lyon,3);
+    public static Travelers traveler3 = new Travelers("Parisiens",paris,4);
+    public static Travelers traveler4 = new Travelers("Bordelais",bordeaux,2);
+    public static Travelers traveler5 = new Travelers("Toulousains",toulouse,3);
 
     public static Travelers groupOfTravelers[] = {traveler1,traveler2,traveler3,traveler4,traveler5};
 
@@ -165,12 +165,12 @@ public class Main {
         //create an arrayList to store the best options for each destination
         ArrayList<GlobalTravelOption> possibleOptions = new ArrayList<>();
         for (City destination : allCities) {
-            //Create an arraylist of hashmaps which associate the travelers to a trip option
+            //Create an arraylist of travelOption which associate the travelers to a trip option
             ArrayList<TravelOption> bestOptionPerDestination = new ArrayList<>();
             for (Travelers traveler : groupOfTravelers) {
                 //get the best option regarding CO2 for a traveler
                 Trip bestOptionPerTravelerPerDestination = traveler.getBestOptionPerDestination(destination);
-                //store it in a hashmap and then in the bestOptionPerCity array
+                //store it in a travelOption object and then in the bestOptionPerDestination array
                 TravelOption travelOption = new TravelOption(traveler, bestOptionPerTravelerPerDestination);
                 bestOptionPerDestination.add(travelOption);
 

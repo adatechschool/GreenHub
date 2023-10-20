@@ -17,11 +17,16 @@ class GlobalTravelOption {
         return CO2quantity;
     }
 
+    public String getDestination() {
+        return globalTravelOption.get(0).getTrip().getArrivalCity().getName();
+    }
+
     public ArrayList<TravelOption> getGlobalTravelOption() {
         return this.globalTravelOption;
     }
 
     public void print() {
+        System.out.println("Pour minimiser l'empreinte carbone du groupe, il faudrait aller à : " + this.getDestination());
         System.out.println("CO2 généré au total (en kg): " + this.getCO2Quantity());
         System.out.println("Détails de l'option de voyage pour tous les voyageurs:");
         for (TravelOption travelOption : this.globalTravelOption) {

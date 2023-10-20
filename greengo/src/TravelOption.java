@@ -34,7 +34,7 @@ public class TravelOption {
             for (Map.Entry<Travelers, Trip> entry : this.getTravelOption().entrySet()) {
                 Travelers traveler = entry.getKey();
                 Trip trip = entry.getValue();
-                System.out.println("Voyageur : " + traveler.getLivingCity().getName());
+                System.out.println("Voyageur : " + traveler.getName());
                 System.out.println("Départ : " + trip.getDepartureCity().getName());
                 System.out.println("Arrivée : " + trip.getArrivalCity().getName());
                 System.out.println("Distance : " + trip.getDistance());
