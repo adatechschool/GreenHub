@@ -1,9 +1,7 @@
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
+
 
 public class Main {
     public static City nantes = new City("Nantes", 0, 0);
@@ -147,69 +145,54 @@ public class Main {
             tripCar1,tripCar2,tripCar3,tripCar4,tripCar5,tripCar6,tripCar7,tripCar8,tripCar9,tripCar10,tripCar11,tripCar12,tripCar13,tripCar14,tripCar15,tripCar16,tripCar17,tripCar18,tripCar19,tripCar20,tripCar21,tripCar22,tripCar23,tripCar24,tripCar25,
             tripTrain1,tripTrain2,tripTrain3,tripTrain4,tripTrain5,tripTrain6,tripTrain7,tripTrain8,tripTrain9,tripTrain10,tripTrain11,tripTrain12,tripTrain13,tripTrain14,tripTrain15,tripTrain16,tripTrain17,tripTrain18,tripTrain19,tripTrain20,tripTrain21,tripTrain22,tripTrain23,tripTrain24,tripTrain25};
 
-    public static Travelers traveler1 = new Travelers(nantes,1);
-    public static Travelers traveler2 = new Travelers(lyon,1);
-    public static Travelers traveler3 = new Travelers(paris,1);
-    public static Travelers traveler4 = new Travelers(bordeaux,1);
-    public static Travelers traveler5 = new Travelers(toulouse,1);
+    public static Travelers traveler1 = new Travelers(nantes,4);
+    public static Travelers traveler2 = new Travelers(lyon,3);
+    public static Travelers traveler3 = new Travelers(paris,4);
+    public static Travelers traveler4 = new Travelers(bordeaux,2);
+    public static Travelers traveler5 = new Travelers(toulouse,3);
 
-    /*public static Travelers groupOfTravelers[] = {traveler1,traveler2,traveler3,traveler4,traveler5};*/
+    public static Travelers groupOfTravelers[] = {traveler1,traveler2,traveler3,traveler4,traveler5};
 
-    static private int minCO2 = 10000;
 
     public static void main(String[] args) {
+        GlobalTravelOption bestTravelOption = getLowestCO2Option(groupOfTravelers);
+        bestTravelOption.print();
 
     }
 
 
-    public static void getLowestCO2Destination(Travelers [] groupOfTravelers) {
-        //instancier pour chaque voyageur l'ensemble des trip possibles et les stocker
-
-        //calculer co2 pour chaque destination
-        //faire une boucle sur les voyageurs
-        HashMap<Travelers,Trip> combinations = new HashMap<>();
-        for (Travelers traveler : groupOfTravelers) {
-            for (Trip trip : traveler.getPossibleTrips()) {
-                combinations.put(traveler,trip);
-            }
-        }
-
-
+    public static GlobalTravelOption getLowestCO2Option(Travelers [] groupOfTravelers) {
+        //create an arrayList to store the best options for each destination
+        ArrayList<GlobalTravelOption> possibleOptions = new ArrayList<>();
         for (City destination : allCities) {
-            for (Travelers member : groupOfTravelers) {
-                HashMap< Travelers, Trip> tempoCombination = new HashMap<>();
-                combinations.forEach((traveler,trip) -> {
-                    if (trip.getArrivalCity() == destination && traveler == member) {
-                        tempoCombination.put(traveler, trip);
-                    }
-                });
+            //Create an arraylist of hashmaps which associate the travelers to a trip option
+            ArrayList<TravelOption> bestOptionPerDestination = new ArrayList<>();
+            for (Travelers traveler : groupOfTravelers) {
+                //get the best option regarding CO2 for a traveler
+                Trip bestOptionPerTravelerPerDestination = traveler.getBestOptionPerDestination(destination);
+                //store it in a hashmap and then in the bestOptionPerCity array
+                TravelOption travelOption = new TravelOption(traveler, bestOptionPerTravelerPerDestination);
+                bestOptionPerDestination.add(travelOption);
 
-                tempoCombination.forEach((traveler, trip) -> {
-                    if (trip.getCO2() < minCO2) {
-                        minCO2 = trip.getCO2();
-                    }
-                });
+            }
+            GlobalTravelOption globalTravelOption = new GlobalTravelOption(bestOptionPerDestination);
+            possibleOptions.add(globalTravelOption);
+        }
+        //loop into the possible options and keep the one with the lowest CO2 emission
+        int minCO2 = Integer.MAX_VALUE; // Initialisation avec une valeur très élevée
+        GlobalTravelOption bestOption = null;
+
+        for (GlobalTravelOption option : possibleOptions) {
+            int totalCO2=0;
+            for (TravelOption travelOption : option.getGlobalTravelOption()) {
+                totalCO2 += travelOption.getCO2();
+            }
+            if (totalCO2 < minCO2) {
+                minCO2 = totalCO2;
+                bestOption = option;
             }
         }
-        //renvoyer destination avec le co2 minimum
+        return bestOption;
+    }
 
-       /* //Create a hashmap to store the global CO2 emission per destination
-        HashMap<City,Integer> SumC02PerDestination = new HashMap<>();
-        for (City city : allCities){
-            SumC02PerDestination.put(city, 0);
-        }
-
-        HashMap<City,Integer> CO2PerCity = new HashMap<>();
-        for (Travelers traveler : groupOfTravelers){
-            // for each traveller get the C02 emission for each destination
-            CO2PerCity.putAll(traveler.getCO2PerDestination());
-            // for each destination calculate the global C02 emissions
-            CO2PerCity.forEach((city, CO2) -> SumC02PerDestination.put(city, SumC02PerDestination.get(city) + CO2));
-        }
-
-        // return the lowest CO2 emission destination & the value
-        Entry<City,Integer>  entryWithMinValue = Collections.min(SumC02PerDestination.entrySet(), Map.Entry.comparingByValue());
-        System.out.println("Clé : " + entryWithMinValue.getKey().getName() + ", Valeur : " + entryWithMinValue.getValue());
-        return entryWithMinValue;
-    }*/
-}
+    }
