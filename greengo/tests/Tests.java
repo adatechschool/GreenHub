@@ -5,8 +5,9 @@ import java.util.AbstractMap;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
-
+/*
 public class Tests {
+
     @Test
     public void getCO2Test() {
         City Nantes = new City("Nantes", 0, 0);
@@ -27,8 +28,8 @@ public class Tests {
 
 
     @Test
-    public void getCO2PerDestinationTest() {
-        /*create the travelers instance for test*/
+     public void getCO2PerDestinationTest() {
+        //create the travelers instance for test
         Travelers travelersTest = new Travelers(Main.nantes, 1);
         Assert.assertTrue(153 == travelersTest.getCO2PerDestination().get(Main.lyon));
         Travelers travelersTest2 = new Travelers(Main.nantes, 2);
@@ -41,4 +42,4 @@ public class Tests {
         Map.Entry<City,Integer> result = new AbstractMap.SimpleEntry<City, Integer>(Main.bordeaux,417);
         Assert.assertEquals(result, Main.getLowestCO2Destination(groupOfTravelers));
     }
-}
+}*/

@@ -26,8 +26,18 @@ public class TravelOption {
     }
 
     public int getCO2() {
-        return trip.getCO2()*traveler.getNumberOfTravelers();
+        if (trip.getModeOfTransport().getTransportName() == "Car"){
+            return trip.getCO2();
+        }
+            return trip.getCO2()*traveler.getNumberOfTravelers();
     }
+
+    public int getBudgetPerPerson () {
+        if (trip.getModeOfTransport().getTransportName() == "Car"){
+            return trip.getBudgetPerPerson();
+        }
+            return trip.getBudgetPerPerson()*traveler.getNumberOfTravelers();
+        }
 
     public void print() {
         System.out.println("Détails de l'option de voyage :");
@@ -43,4 +53,5 @@ public class TravelOption {
                 System.out.println("-----");
             }
     }
+
 }
