@@ -30,7 +30,6 @@ public class Trip {
                 System.out.println("Not a valid mode of transport");
 
         }
-        this.travelTime = travelTime;
         this.budgetPerPerson = budgetPerPerson;
     }
 

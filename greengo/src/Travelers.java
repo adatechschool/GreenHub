@@ -53,6 +53,9 @@ public class Travelers {
         //Create an arraylist to store the possible options for the destination
         ArrayList<Trip> possibleOptions = this.getPossibleOptionsPerDestination(destination);
         //loop into the possible options and keep the one with the lowest CO2 emission
+        if (possibleOptions.size()==0) {
+            return null;
+        }
         int minCO2 = possibleOptions.get(0).getCO2()*this.numberOfTravelers;
         Trip bestOption = possibleOptions.get(0);
         for (int i=1; i<possibleOptions.size(); i++) {
