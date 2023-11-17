@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6738ed34-af0d-4695-8281-71e6d1ea7cbe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FakeGreenGO/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FakeGreenGO/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FakeGreenGO/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FakeGreenGO/.idea/libraries/async_http_client_2_0_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FakeGreenGO/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FakeGreenGO/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FakeGreenGO/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FakeGreenGO/FakeGreenGO.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FakeGreenGO/lib/async-http-client-2.0.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FakeGreenGO/src/Avion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FakeGreenGO/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FakeGreenGo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FakeGreenGo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +25,9 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
   <component name="ProjectId" id="2WNv4fQUTHUVzGIHQkpYx2yGYyK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -49,10 +41,17 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/npesneau/Ada/allRepository/FakeGreenGo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -60,7 +59,7 @@
       <recent name="$PROJECT_DIR$/greengo" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.All in FakeGreenGo">
     <configuration type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FakeGreenGo" />
       <option name="PACKAGE_NAME" value="" />
@@ -91,7 +90,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Tests" />
         <item itemvalue="JUnit.All in FakeGreenGo" />
         <item itemvalue="JUnit.Tests.getCO2" />
       </list>
@@ -105,8 +103,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1696585662761</updated>
+      <workItem from="1700212542146" duration="1454000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
