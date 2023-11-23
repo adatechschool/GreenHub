@@ -17,4 +17,12 @@ public class City {
     public String getName() {
         return this.name;
     }
+
+    public float getX() {
+        return x;
+    }
+
+    public float getY() {
+        return y;
+    }
 }

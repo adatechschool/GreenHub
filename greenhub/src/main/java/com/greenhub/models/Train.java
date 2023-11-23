@@ -7,6 +7,7 @@ public class Train implements ModeOfTransport{
     public String getTransportName() {
         return this.transportName;
     }
+
     public int getCO2PerKilometer() {
         return this.CO2EmissionPerKilometer;
     }

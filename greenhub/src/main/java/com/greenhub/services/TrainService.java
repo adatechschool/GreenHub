@@ -23,37 +23,48 @@ public class TrainService {
 
 
     public Trip getTrainTrip(String origin, String destination) {
+        //create the headers of the api call
         WebClient trainApi = WebClient.builder()
                 .baseUrl(apiUrl + "/journeys?from=" + origin + "&to=" + destination)
                 .defaultHeader("Content-Type", "application/json")
                 .defaultHeader("Authorization", createBasicAuthHeader(username, password))
                 .build();
 
+        //consume the api
         String trainApiJSON = trainApi.get()
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();
-
+        //create an object mapper to parse the api response to make it a trip
         ObjectMapper om = new ObjectMapper();
         try {
+            //read the trainApiJSON response and serialize it into a TrainTrips object
             TrainTrips apiResponse = om.readValue(trainApiJSON, TrainTrips.class);
+
+            //parse the string origin to have the coordinates
             String[] originCoordinates = origin.split(";");
             float originX = Float.parseFloat(originCoordinates[1]);
             float originY = Float.parseFloat(originCoordinates[0]);
 
+            //parse the string destination to have the coordinates
             String[] destinationCoordinates = destination.split(";");
             float destinationX = Float.parseFloat(destinationCoordinates[1]);
             float destinationY = Float.parseFloat(destinationCoordinates[0]);
 
             ModeOfTransport train = new Train();
+            City departureCity = new City("Paris", originX, originY);
+            City arrivalCity = new City("Marseille", destinationX, destinationY);
 
-            return new Trip(new City("Paris", originX, originY),
-                    new City("Marseille", destinationX, destinationY),
-                    (int) Math.round(apiResponse.getJourneys().get(0).getCo2_emission().getValue()/train.getCO2PerKilometer()),
+            return new Trip(
+                    departureCity,
+                    arrivalCity,
+                    (int) Math.round(apiResponse.getJourneys().get(0).getCo2_emission().getValue()/4*1000),
                     train,
-                    apiResponse.getJourneys().get(0).getDuration(),
-                    0);
+                    apiResponse.getJourneys().get(0).getDuration()/60,
+                    0
+            );
         } catch (JsonProcessingException e) {
+            System.out.println("issue with serialization of json");
             throw new RuntimeException(e);
         }
     }

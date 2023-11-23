@@ -6,13 +6,9 @@ public class Journey{
     @JsonProperty("duration")
     public int getDuration() {
         return this.duration; }
-    public void setDuration(int duration) {
-        this.duration = duration; }
     int duration;
     @JsonProperty("co2_emission")
     public Co2Emission getCo2_emission() {
         return this.co2_emission; }
-    public void setCo2_emission(Co2Emission co2_emission) {
-        this.co2_emission = co2_emission; }
     Co2Emission co2_emission;
 }

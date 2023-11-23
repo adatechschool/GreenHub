@@ -1,6 +1,5 @@
 package com.greenhub.models;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,9 +28,9 @@ public class TravelOption {
 
     public int getCO2() {
         if (trip.getModeOfTransport().getTransportName() == "Car"){
-            return trip.getCO2();
+            return trip.calculateCo2();
         }
-            return trip.getCO2()*traveler.getNumberOfTravelers();
+            return trip.calculateCo2()*traveler.getNumberOfTravelers();
     }
 
     public int getBudgetPerPerson () {

@@ -57,11 +57,11 @@ public class Travelers {
         if (possibleOptions.size()==0) {
             return null;
         }
-        int minCO2 = possibleOptions.get(0).getCO2()*this.numberOfTravelers;
+        int minCO2 = possibleOptions.get(0).calculateCo2()*this.numberOfTravelers;
         Trip bestOption = possibleOptions.get(0);
         for (int i=1; i<possibleOptions.size(); i++) {
-            if(possibleOptions.get(i).getCO2() < minCO2) {
-                minCO2 = possibleOptions.get(i).getCO2()*this.numberOfTravelers;
+            if(possibleOptions.get(i).calculateCo2() < minCO2) {
+                minCO2 = possibleOptions.get(i).calculateCo2()*this.numberOfTravelers;
                 bestOption = possibleOptions.get(i);
             }
         }

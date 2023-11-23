@@ -1,6 +1,6 @@
 package com.greenhub.models;
-
 import java.lang.Math;
+
 
 public class Trip {
     private City departureCity;
@@ -20,7 +20,7 @@ public class Trip {
         this.modeOfTransport = modeOfTransport;
         switch(this.modeOfTransport.getTransportName()) {
             case "Train":
-                this.travelTime = travelTime + 60;
+                this.travelTime = travelTime;
                 break;
             case "Plane":
                 this.travelTime = travelTime + 120;
@@ -36,23 +36,23 @@ public class Trip {
     }
 
     public City getDepartureCity() {
-        return departureCity;
+        return this.departureCity;
     }
     public City getArrivalCity() {
-        return arrivalCity;
+        return this.arrivalCity;
     }
     public int getDistance() {
-        return distance;
+        return this.distance;
     }
 
     public ModeOfTransport getModeOfTransport() {
         return this.modeOfTransport;
     }
 
-    public int getBudgetPerPerson () { return budgetPerPerson;};
-    public int getTravelTime () { return travelTime;};
+    public int getBudgetPerPerson () { return this.budgetPerPerson;};
+    public int getTravelTime () { return this.travelTime;};
 
-    public int getCO2 (){
+    public int calculateCo2(){
         return Math.round(this.distance * this.modeOfTransport.getCO2PerKilometer() / 1000);
     };
 
