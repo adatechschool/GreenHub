@@ -5,8 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6738ed34-af0d-4695-8281-71e6d1ea7cbe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FakeGreenGO/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/.idea/libraries/bluecatcode_junit_4_10_extended.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/greengo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/src/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/src/City.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/src/GlobalTravelOption.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/src/ModeOfTransport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/src/Plane.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/src/Train.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/src/TravelOption.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/src/Travelers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/src/Trip.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greengo/tests/Tests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,35 +45,35 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2WNv4fQUTHUVzGIHQkpYx2yGYyK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/npesneau/Ada/allRepository/FakeGreenGo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/npesneau/Ada/allRepository/FakeGreenGo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/greengo" />
@@ -104,6 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696585662761</updated>
       <workItem from="1700212542146" duration="1454000" />
+      <workItem from="1700745184255" duration="224000" />
     </task>
     <servers />
   </component>
