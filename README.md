@@ -2,7 +2,7 @@
 
 GreenHub aimed at finding the best meeting places for friends or family with the goal of minimizing carbon emissions associated with transportation. 
 
-## Tech Stack
+## Stack
 
 The project is built using the following technologies:
 
