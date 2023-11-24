@@ -7,7 +7,7 @@ GreenHub aimed at finding the best meeting places for friends or family with the
 The project is built using the following technologies:
 
 - **Java:** Version 17
-- **Spring Boot:** Version
+- **Spring Boot:** Version 3.1.5
 
 ## Features
 
