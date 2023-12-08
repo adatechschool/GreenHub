@@ -29,7 +29,7 @@ public class CarService {
                 .build();
 
         //consume the api
-        String trainApiJSON = carApi.get()
+        String carApiJSON = carApi.get()
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();
@@ -38,10 +38,11 @@ public class CarService {
         ObjectMapper om = new ObjectMapper();
 
         try {
-            //read the trainApiJSON response and serialize it into a TrainTrips object
-            TrainTrips apiResponse = om.readValue(trainApiJSON, TrainTrips.class);
+            //read the carApiJSON response and serialize it into a CarTrips object
+            CarTrips apiResponse = om.readValue(carApiJSON, CarTrips.class);
 
-            float departureX = Float.parseFloat(metadata.query.coordinates[])
+            float departureX = Float.parseFloat(metadata.query.coordinates[0][0]);
+            float departureY = Float.parseFloat(metadata.query.coordinates[0][1]);
 
             ModeOfTransport car = new Car();
             City departureCity = new City("Paris", departureX, departureY);
