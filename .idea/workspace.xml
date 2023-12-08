@@ -87,7 +87,7 @@
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/greengo" />
@@ -138,6 +138,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696585662761</updated>
       <workItem from="1700212542146" duration="1454000" />
+      <workItem from="1700745184255" duration="224000" />
     </task>
     <servers />
   </component>
