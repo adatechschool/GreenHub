@@ -1,21 +1,18 @@
-package com.greenhub;
+package com.greenhub.repository;
 
 import com.greenhub.models.*;
-import org.springframework.stereotype.Component;
-import org.springframework.boot.CommandLineRunner;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import org.springframework.stereotype.Repository;
 
-@Component
-public class Main implements CommandLineRunner {
+@Repository
+public class DataRepository {
+
     public static City nantes = new City("Nantes", 0, 0);
     public static City lyon = new City("Lyon", 0, 0);
     public static City paris = new City("Paris", 0, 0);
     public static City bordeaux = new City("Bordeaux", 0, 0);
     public static City toulouse = new City("Toulouse", 0, 0);
 
-    public static City[] allCities = {paris, nantes, lyon, bordeaux, toulouse};
+    public static City[] allDestinations = {paris, nantes, lyon, bordeaux, toulouse};
 
     /*-----------------*/
 
@@ -158,55 +155,5 @@ public class Main implements CommandLineRunner {
     public static Travelers traveler5 = new Travelers("Toulousains", toulouse, 3, maxTravelTime, 1000);
 
     public static Travelers[] groupOfTravelers = {traveler1, traveler2, traveler3, traveler4, traveler5};
-
-    @Override
-    public void run(String... args) throws Exception {
-        GlobalTravelOption bestTravelOption = getLowestCO2Option(groupOfTravelers);
-        bestTravelOption.print();
-    }
-
-
-    public static GlobalTravelOption getLowestCO2Option(Travelers[] groupOfTravelers) {
-        //create an arrayList to store the best options for each destination
-        ArrayList<GlobalTravelOption> possibleOptions = new ArrayList<>();
-        for (City destination : allCities) {
-            //Create an arraylist of travelOption which associate the travelers to a trip option
-            ArrayList<TravelOption> bestOptionPerDestination = new ArrayList<>();
-            for (Travelers traveler : groupOfTravelers) {
-                //get the best option regarding CO2 for a traveler
-                Trip bestOptionPerTravelerPerDestination = traveler.getBestOptionPerDestination(destination);
-                //store it in a travelOption object and then in the bestOptionPerDestination array
-                TravelOption travelOption = new TravelOption(traveler, bestOptionPerTravelerPerDestination);
-                bestOptionPerDestination.add(travelOption);
-
-            }
-            boolean possibleDestination = true;
-            for (TravelOption travelOption : bestOptionPerDestination) {
-                if (travelOption.getTrip() == null) {
-                    possibleDestination = false;
-                    break;
-                }
-            }
-            if (possibleDestination) {
-                GlobalTravelOption globalTravelOption = new GlobalTravelOption(bestOptionPerDestination);
-                possibleOptions.add(globalTravelOption);
-            }
-        }
-        //loop into the possible options and keep the one with the lowest CO2 emission
-        int minCO2 = Integer.MAX_VALUE; // Initialisation avec une valeur très élevée
-        GlobalTravelOption bestOption = null;
-
-        for (GlobalTravelOption option : possibleOptions) {
-            int totalCO2 = 0;
-            for (TravelOption travelOption : option.getGlobalTravelOption()) {
-                totalCO2 += travelOption.getCO2();
-            }
-            if (totalCO2 < minCO2) {
-                minCO2 = totalCO2;
-                bestOption = option;
-            }
-        }
-        return bestOption;
-    }
 
 }
