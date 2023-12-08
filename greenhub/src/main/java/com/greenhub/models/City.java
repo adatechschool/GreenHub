@@ -25,4 +25,9 @@ public class City {
     public float getY() {
         return y;
     }
+
+    public String coordinatesAsString() {
+        return getY() + ";" + getX();
+    }
+
 }

@@ -1,6 +1,6 @@
 package com.greenhub.models;
 
-import com.greenhub.Main;
+import com.greenhub.repository.DataRepository;
 
 import java.util.ArrayList;
 
@@ -38,7 +38,7 @@ public class Travelers {
         //Create an arraylist to store the possible options for the destination
         ArrayList<Trip> possibleOptions = new ArrayList<>();
         //loop into all the trips and add the relevant elements to the arraylist
-        for (Trip trip: Main.allTrips) {
+        for (Trip trip: DataRepository.allTrips) {
             if (this.livingCity == trip.getDepartureCity()
                     && trip.getArrivalCity() == destination
                     && trip.getTravelTime() <= this.maxTravelTime
@@ -57,11 +57,11 @@ public class Travelers {
         if (possibleOptions.size()==0) {
             return null;
         }
-        int minCO2 = possibleOptions.get(0).calculateCo2()*this.numberOfTravelers;
+        int minCO2 = possibleOptions.get(0).getCo2()*this.numberOfTravelers;
         Trip bestOption = possibleOptions.get(0);
         for (int i=1; i<possibleOptions.size(); i++) {
-            if(possibleOptions.get(i).calculateCo2() < minCO2) {
-                minCO2 = possibleOptions.get(i).calculateCo2()*this.numberOfTravelers;
+            if(possibleOptions.get(i).getCo2() < minCO2) {
+                minCO2 = possibleOptions.get(i).getCo2()*this.numberOfTravelers;
                 bestOption = possibleOptions.get(i);
             }
         }
