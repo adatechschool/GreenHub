@@ -10,7 +10,7 @@ import java.io.IOException;
 @Repository
 public class CityLoader {
     public static City[] loadCitiesFromCSV(String filePath) {
-        City[] cities = new City[10]; // Définir la taille du tableau
+        City[] cities = new City[11]; // Définir la taille du tableau
 
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -23,8 +23,8 @@ public class CityLoader {
                 String name = values[0];
                 float latitude = Float.parseFloat(values[1]);
                 float longitude = Float.parseFloat(values[2]);
-
-                City city = new City(name, latitude, longitude);
+                String iataCode = values[3];
+                City city = new City(name, latitude, longitude, iataCode);
                 cities[index++] = city;
             }
         } catch (IOException e) {

@@ -5,10 +5,17 @@ public class City {
     private String name;
     private float x;
     private float y;
+    private String iataCode;
 
     // constructeur
-    public City(String name, float x, float y) {
+    public City(String name, float x, float y, String iataCode) {
+        this.name = name;
+        this.x = x;
+        this.y = y;
+        this.iataCode = iataCode;
+    }
 
+    public City(String name, float x, float y) {
         this.name = name;
         this.x = x;
         this.y = y;
@@ -24,6 +31,10 @@ public class City {
 
     public float getY() {
         return y;
+    }
+
+    public String getIataCode() {
+        return this.iataCode;
     }
 
     public String coordinatesAsString() {
