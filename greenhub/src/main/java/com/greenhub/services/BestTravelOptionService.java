@@ -1,18 +1,15 @@
 package com.greenhub.services;
 
-import com.greenhub.models.City;
-import com.greenhub.models.GlobalTravelOption;
-import com.greenhub.models.TravelOption;
-import com.greenhub.models.Travelers;
-import com.greenhub.models.Trip;
+import com.greenhub.models.*;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 @Service
 public class BestTravelOptionService {
 
-    public static GlobalTravelOption getLowestCo2Option(Travelers[] groupOfTravelers, City[] destinations) {
+    public static ArrayList<GlobalTravelOption> getLowestCo2Option(Travelers[] groupOfTravelers, City[] destinations, ArrayList<Trip> allTrips) {
         //create an arrayList to store the best options for each destination
         ArrayList<GlobalTravelOption> possibleOptions = new ArrayList<>();
         for (City destination : destinations) {
@@ -20,7 +17,7 @@ public class BestTravelOptionService {
             ArrayList<TravelOption> bestOptionPerDestination = new ArrayList<>();
             for (Travelers traveler : groupOfTravelers) {
                 //get the best option regarding CO2 for a traveler
-                Trip bestOptionPerTravelerPerDestination = traveler.getBestOptionPerDestination(destination);
+                Trip bestOptionPerTravelerPerDestination = traveler.getBestOptionPerDestination(destination, allTrips);
                 //store it in a travelOption object and then in the bestOptionPerDestination array
                 TravelOption travelOption = new TravelOption(traveler, bestOptionPerTravelerPerDestination);
                 bestOptionPerDestination.add(travelOption);
@@ -38,6 +35,9 @@ public class BestTravelOptionService {
                 possibleOptions.add(globalTravelOption);
             }
         }
+
+        GlobalTravelOptionComparator co2Comparator = new GlobalTravelOptionComparator();
+        Collections.sort(possibleOptions, co2Comparator);
         //loop into the possible options and keep the one with the lowest CO2 emission
         int minCO2 = Integer.MAX_VALUE; // Initialisation avec une valeur très élevée
         GlobalTravelOption bestOption = null;
@@ -52,6 +52,6 @@ public class BestTravelOptionService {
                 bestOption = option;
             }
         }
-        return bestOption;
+        return possibleOptions;
     }
 }

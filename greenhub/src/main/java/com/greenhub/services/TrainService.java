@@ -15,6 +15,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 @Service
 public class TrainService {
@@ -38,7 +39,7 @@ public class TrainService {
 
     public Trip getTrainTrip(City origin, City destination) throws JsonProcessingException {
         // Check if the origin and destination cities are the same
-        if (origin.equals(destination)) {
+        if (origin.getName().equals(destination.getName())) {
             // If they are the same, return a Trip object with values set to 0
             return new Trip(origin, destination, 0, new Train(), 0, 0, 0);
         }
@@ -82,13 +83,12 @@ public class TrainService {
         }
     }
 
-    public ArrayList<Trip> getAllTrainTrips(City origin) {
-        City[] destinations = CityLoader.loadCitiesFromCSV("/Users/mehdigrimault/Desktop/Ada/FakeGreenGo/greenhub/src/main/java/com/greenhub/repository/cities.csv");
-        ArrayList<Trip> allTrips = new ArrayList<>();
+    public ArrayList<Trip> getAllTrainTrips(City origin, City[] destinations) {
+        ArrayList<Trip> trainTrips = new ArrayList<>();
         for (City destination : destinations) {
             try {
                 Trip trip = getTrainTrip(origin, destination);
-                allTrips.add(trip);
+                trainTrips.add(trip);
             } catch (HttpClientErrorException e) {
                 // Capturez les exceptions spécifiques liées à une erreur HTTP (par exemple, 404 Not Found)
                 System.err.println("Erreur lors de l'appel à " + destination.getName() + ": " + e.getRawStatusCode() + " - " + e.getStatusText());
@@ -97,7 +97,8 @@ public class TrainService {
                 System.err.println("Erreur générale lors de l'appel à " + destination.getName() + ": " + e.getMessage());
             }
         }
-        return allTrips;
+        trainTrips.removeIf(Objects::isNull);
+        return trainTrips;
     }
 
     // Create the basic authentification header

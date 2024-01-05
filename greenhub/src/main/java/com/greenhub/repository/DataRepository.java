@@ -1,6 +1,7 @@
 package com.greenhub.repository;
 
 import com.greenhub.models.*;
+import com.greenhub.services.PlaneService;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -147,7 +148,7 @@ public class DataRepository {
             tripCar1, tripCar2, tripCar3, tripCar4, tripCar5, tripCar6, tripCar7, tripCar8, tripCar9, tripCar10, tripCar11, tripCar12, tripCar13, tripCar14, tripCar15, tripCar16, tripCar17, tripCar18, tripCar19, tripCar20, tripCar21, tripCar22, tripCar23, tripCar24, tripCar25,
             tripTrain1, tripTrain2, tripTrain3, tripTrain4, tripTrain5, tripTrain6, tripTrain7, tripTrain8, tripTrain9, tripTrain10, tripTrain11, tripTrain12, tripTrain13, tripTrain14, tripTrain15, tripTrain16, tripTrain17, tripTrain18, tripTrain19, tripTrain20, tripTrain21, tripTrain22, tripTrain23, tripTrain24, tripTrain25};
 
-    public static int maxTravelTime = 320;
+    public static int maxTravelTime = 500;
     public static Travelers traveler1 = new Travelers("Nantais", nantes, 4, maxTravelTime, 1000);
     public static Travelers traveler2 = new Travelers("Lyonnais", lyon, 5, maxTravelTime, 1000);
     public static Travelers traveler3 = new Travelers("Parisiens", paris, 2, maxTravelTime, 1000);
