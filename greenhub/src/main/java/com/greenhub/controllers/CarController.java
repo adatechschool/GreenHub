@@ -29,6 +29,13 @@ public class CarController {
         return carService.getCarTrip(originCity,destinationCity);
     }
 
+    @GetMapping("/allCarTrips")
+    public ArrayList<Trip> fetchAllTrips(@RequestParam String origin) {
+        City originCity = buildCityFromString(origin);
+        City[] destinations = CityLoader.loadCitiesFromCSV("/Users/mehdigrimault/Desktop/Ada/FakeGreenGo/greenhub/src/main/java/com/greenhub/repository/cities.csv");
+        return carService.getAllCarTrips(originCity,destinations);
+    }
+
     private City buildCityFromString(String string) {
         String[] values = string.split(",");
         String cityName = values[0];
