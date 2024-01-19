@@ -1,22 +1,18 @@
-package com.greenhub;
+package com.greenhub.repository;
 
 import com.greenhub.models.*;
-import com.greenhub.services.CarService;
-import org.springframework.stereotype.Component;
-import org.springframework.boot.CommandLineRunner;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import com.greenhub.services.PlaneService;
+import org.springframework.stereotype.Repository;
 
-@Component
-public class Main implements CommandLineRunner {
+@Repository
+public class DataRepository {
     public static City nantes = new City("Nantes", 0, 0);
     public static City lyon = new City("Lyon", 0, 0);
     public static City paris = new City("Paris", 0, 0);
     public static City bordeaux = new City("Bordeaux", 0, 0);
     public static City toulouse = new City("Toulouse", 0, 0);
 
-    public static City[] allCities = {paris, nantes, lyon, bordeaux, toulouse};
+    public static City[] allDestinations = {paris, nantes, lyon, bordeaux, toulouse};
 
     /*-----------------*/
 
@@ -151,7 +147,7 @@ public class Main implements CommandLineRunner {
             tripCar1, tripCar2, tripCar3, tripCar4, tripCar5, tripCar6, tripCar7, tripCar8, tripCar9, tripCar10, tripCar11, tripCar12, tripCar13, tripCar14, tripCar15, tripCar16, tripCar17, tripCar18, tripCar19, tripCar20, tripCar21, tripCar22, tripCar23, tripCar24, tripCar25,
             tripTrain1, tripTrain2, tripTrain3, tripTrain4, tripTrain5, tripTrain6, tripTrain7, tripTrain8, tripTrain9, tripTrain10, tripTrain11, tripTrain12, tripTrain13, tripTrain14, tripTrain15, tripTrain16, tripTrain17, tripTrain18, tripTrain19, tripTrain20, tripTrain21, tripTrain22, tripTrain23, tripTrain24, tripTrain25};
 
-    public static int maxTravelTime = 320;
+    public static int maxTravelTime = 500;
     public static Travelers traveler1 = new Travelers("Nantais", nantes, 4, maxTravelTime, 1000);
     public static Travelers traveler2 = new Travelers("Lyonnais", lyon, 5, maxTravelTime, 1000);
     public static Travelers traveler3 = new Travelers("Parisiens", paris, 2, maxTravelTime, 1000);
@@ -159,60 +155,4 @@ public class Main implements CommandLineRunner {
     public static Travelers traveler5 = new Travelers("Toulousains", toulouse, 3, maxTravelTime, 1000);
 
     public static Travelers[] groupOfTravelers = {traveler1, traveler2, traveler3, traveler4, traveler5};
-
-    @Override
-    public void run(String... args) throws Exception {
-        GlobalTravelOption bestTravelOption = getLowestCO2Option(groupOfTravelers);
-        bestTravelOption.print();
-
-        //test
-        System.out.print("test");
-        CarService carService = new CarService();
-        carService.getCarTrip("-1.5427562403976707,47.215594893836716","2.3208076325309848, 48.842281481558445");
-    }
-
-
-    public static GlobalTravelOption getLowestCO2Option(Travelers[] groupOfTravelers) {
-        //create an arrayList to store the best options for each destination
-        ArrayList<GlobalTravelOption> possibleOptions = new ArrayList<>();
-        for (City destination : allCities) {
-            //Create an arraylist of travelOption which associate the travelers to a trip option
-            ArrayList<TravelOption> bestOptionPerDestination = new ArrayList<>();
-            for (Travelers traveler : groupOfTravelers) {
-                //get the best option regarding CO2 for a traveler
-                Trip bestOptionPerTravelerPerDestination = traveler.getBestOptionPerDestination(destination);
-                //store it in a travelOption object and then in the bestOptionPerDestination array
-                TravelOption travelOption = new TravelOption(traveler, bestOptionPerTravelerPerDestination);
-                bestOptionPerDestination.add(travelOption);
-
-            }
-            boolean possibleDestination = true;
-            for (TravelOption travelOption : bestOptionPerDestination) {
-                if (travelOption.getTrip() == null) {
-                    possibleDestination = false;
-                    break;
-                }
-            }
-            if (possibleDestination) {
-                GlobalTravelOption globalTravelOption = new GlobalTravelOption(bestOptionPerDestination);
-                possibleOptions.add(globalTravelOption);
-            }
-        }
-        //loop into the possible options and keep the one with the lowest CO2 emission
-        int minCO2 = Integer.MAX_VALUE; // Initialisation avec une valeur très élevée
-        GlobalTravelOption bestOption = null;
-
-        for (GlobalTravelOption option : possibleOptions) {
-            int totalCO2 = 0;
-            for (TravelOption travelOption : option.getGlobalTravelOption()) {
-                totalCO2 += travelOption.getCO2();
-            }
-            if (totalCO2 < minCO2) {
-                minCO2 = totalCO2;
-                bestOption = option;
-            }
-        }
-        return bestOption;
-    }
-
 }

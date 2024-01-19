@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6738ed34-af0d-4695-8281-71e6d1ea7cbe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/greenhub/src/main/java/com/greenhub/models/train/Geojson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/greenhub/src/main/java/com/greenhub/models/train/Property.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/greenhub/src/main/java/com/greenhub/models/train/Section.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FakeGreenGo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FakeGreenGO/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FakeGreenGo.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/greengo/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/greengo/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/greengo/.idea/codeStyles/Project.xml" beforeDir="false" />
@@ -27,6 +36,11 @@
       <change beforePath="$PROJECT_DIR$/greengo/src/Travelers.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/greengo/src/Trip.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/greengo/tests/Tests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/greenhub/src/main/java/com/greenhub/models/TravelOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/greenhub/src/main/java/com/greenhub/models/TravelOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/greenhub/src/main/java/com/greenhub/models/Travelers.java" beforeDir="false" afterPath="$PROJECT_DIR$/greenhub/src/main/java/com/greenhub/models/Travelers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/greenhub/src/main/java/com/greenhub/models/Trip.java" beforeDir="false" afterPath="$PROJECT_DIR$/greenhub/src/main/java/com/greenhub/models/Trip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/greenhub/src/main/java/com/greenhub/models/train/Journey.java" beforeDir="false" afterPath="$PROJECT_DIR$/greenhub/src/main/java/com/greenhub/models/train/Journey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/greenhub/src/main/java/com/greenhub/services/TrainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/greenhub/src/main/java/com/greenhub/services/TrainService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,25 +67,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/npesneau/Ada/allRepository/FakeGreenGo&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "train",
+    "last_opened_file_path": "/Users/mehdigrimault/Desktop/Ada/FakeGreenGo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
 }</component>
   <component name="RecentsManager">

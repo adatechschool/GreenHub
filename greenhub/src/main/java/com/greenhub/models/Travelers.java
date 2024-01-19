@@ -1,8 +1,9 @@
 package com.greenhub.models;
 
-import com.greenhub.Main;
+import com.greenhub.repository.DataRepository;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 
 public class Travelers {
@@ -34,13 +35,13 @@ public class Travelers {
         return numberOfTravelers;
     }
 
-    public ArrayList<Trip> getPossibleOptionsPerDestination (City destination) {
+    public ArrayList<Trip> getPossibleOptionsPerDestination (City destination, ArrayList<Trip> allTrips) {
         //Create an arraylist to store the possible options for the destination
         ArrayList<Trip> possibleOptions = new ArrayList<>();
         //loop into all the trips and add the relevant elements to the arraylist
-        for (Trip trip: Main.allTrips) {
-            if (this.livingCity == trip.getDepartureCity()
-                    && trip.getArrivalCity() == destination
+        for (Trip trip: allTrips) {
+            if (Objects.equals(this.livingCity.getName(), trip.getDepartureCity().getName())
+                    && Objects.equals(trip.getArrivalCity().getName(), destination.getName())
                     && trip.getTravelTime() <= this.maxTravelTime
                     && trip.getBudgetPerPerson() <= this.maxBudgetPerPerson) {
                 possibleOptions.add(trip);
@@ -50,18 +51,18 @@ public class Travelers {
         return possibleOptions;
     }
 
-    public Trip getBestOptionPerDestination (City destination) {
+    public Trip getBestOptionPerDestination (City destination, ArrayList<Trip> allTrips) {
         //Create an arraylist to store the possible options for the destination
-        ArrayList<Trip> possibleOptions = this.getPossibleOptionsPerDestination(destination);
+        ArrayList<Trip> possibleOptions = this.getPossibleOptionsPerDestination(destination, allTrips);
         //loop into the possible options and keep the one with the lowest CO2 emission
         if (possibleOptions.size()==0) {
             return null;
         }
-        int minCO2 = possibleOptions.get(0).calculateCo2()*this.numberOfTravelers;
+        int minCO2 = possibleOptions.get(0).getCo2()*this.numberOfTravelers;
         Trip bestOption = possibleOptions.get(0);
         for (int i=1; i<possibleOptions.size(); i++) {
-            if(possibleOptions.get(i).calculateCo2() < minCO2) {
-                minCO2 = possibleOptions.get(i).calculateCo2()*this.numberOfTravelers;
+            if(possibleOptions.get(i).getCo2() < minCO2) {
+                minCO2 = possibleOptions.get(i).getCo2()*this.numberOfTravelers;
                 bestOption = possibleOptions.get(i);
             }
         }
