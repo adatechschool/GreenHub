@@ -1,17 +1,13 @@
 package com.greenhub.services;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.greenhub.models.*;
-import com.greenhub.models.plane.Arrival;
-import com.greenhub.models.plane.Departure;
-import com.greenhub.models.plane.FlightData;
-import com.greenhub.models.plane.FlightResponse;
-import com.greenhub.repository.CityLoader;
+import com.greenhub.models.SkyscannerResponse.FlightResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import java.time.Duration;
@@ -29,14 +25,14 @@ public class PlaneService {
 
     @Autowired
     public PlaneService(@Value("${planeApi.url}") String apiUrl,
-                        @Value("${planeApi.accessKey}") String accessKey,
                         WebClient.Builder webClientBuilder,
                         ObjectMapper objectMapper) {
         this.objectMapper = objectMapper;
-        this.baseUrl = apiUrl + "?access_key=" + accessKey;
+        this.baseUrl = apiUrl;
         this.planeApi = webClientBuilder
                 .baseUrl(apiUrl)
                 .defaultHeader("Content-Type", "application/json")
+                .defaultHeader("x-api-key", "sh428739766321522266746152871799")
                 .build();
     }
 
@@ -47,30 +43,24 @@ public class PlaneService {
             return new Trip(origin, destination, 0, new Plane(), 0, 0, 0);
         }
         try {
-            String url = baseUrl +
-                    "&dep_iata=" + origin.getIataCode() +
-                    "&arr_iata=" + destination.getIataCode() +
-                    "&flight_status=scheduled" +
-                    "&limit=1";
+            // Définir les variables
+            String originIata = origin.getIataCode();
+            String destinationIata = destination.getIataCode();
 
-            String planeApiJSON = planeApi.get()
-                    .uri(url)
+            // Construire le corps de la requête avec les variables
+            String requestBody = String.format("{ \"query\": { \"market\": \"FR\", \"locale\": \"fr-FR\", \"currency\": \"EUR\", \"queryLegs\": [{ \"originPlaceId\": { \"iata\": \"%s\" }, \"destinationPlaceId\": { \"iata\": \"%s\" }, \"date\": { \"year\": 2024, \"month\": 2, \"day\": 23 } }], \"adults\": 1, \"childrenAges\": [], \"cabinClass\": \"CABIN_CLASS_ECONOMY\", \"excludedAgentsIds\": [], \"excludedCarriersIds\": [], \"includedAgentsIds\": [], \"includedCarriersIds\": [], \"includeSustainabilityData\": true, \"nearbyAirports\": false } }", originIata, destinationIata);
+
+            // Effectuer la requête POST avec WebClient
+            String planeApiJSON = planeApi.post()
+                    .uri("search/create")
+                    .body(BodyInserters.fromValue(requestBody))
                     .retrieve()
                     .bodyToMono(String.class)
-                    .block();
+                    .block(); // Bloquer jusqu'à ce que la réponse soit récupérée (à utiliser judicieusement dans un environnement réactif)
+
 
             FlightResponse flightResponse = objectMapper.readValue(planeApiJSON, FlightResponse.class);
-
-            // Suppose there is only one flight in the response
-            FlightData flightData = flightResponse.getData()[0];
-            Departure departure = flightData.getDeparture();
-            Arrival arrival = flightData.getArrival();
-
-            ZonedDateTime departureTime = ZonedDateTime.parse(departure.getScheduled());
-            ZonedDateTime arrivalTime = ZonedDateTime.parse(arrival.getScheduled());
-
             ModeOfTransport plane = new Plane();
-            Duration transportTime = Duration.between(departureTime, arrivalTime);
             int distance = (int) DistanceCalculator.calculateDistance(origin,destination);
 
             return new Trip(
@@ -78,7 +68,7 @@ public class PlaneService {
                     destination,
                     distance,
                     plane,
-                    (int) transportTime.toMinutes(),
+                    flightResponse.content.stats.itineraries.getMinDuration(),
                     0,
                     distance * plane.getCO2PerKilometer()
 

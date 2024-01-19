@@ -45,10 +45,10 @@ public class Trip {
         this.modeOfTransport = modeOfTransport;
         switch(this.modeOfTransport.getTransportName()) {
             case "Train":
-                this.travelTime = travelTime;
+                this.travelTime = travelTime + 45;
                 break;
             case "Plane":
-                this.travelTime = travelTime + 120;
+                this.travelTime = travelTime + 90;
                 break;
             case "Car":
                 this.travelTime = travelTime;
