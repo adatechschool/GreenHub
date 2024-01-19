@@ -10,7 +10,7 @@ import java.io.IOException;
 @Repository
 public class CityLoader {
     public static City[] loadCitiesFromCSV(String filePath) {
-        City[] cities = new City[9]; // Définir la taille du tableau
+        City[] cities = new City[10]; // Définir la taille du tableau
 
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;

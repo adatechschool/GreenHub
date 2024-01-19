@@ -1,6 +1,6 @@
-package com.greenhub.models.SkyscannerResponse;
+package com.greenhub.models.apis.plane;
 
-public class FlightResponse {
+public class PlaneTrips {
     public Content content;
 
     public static class Content{

@@ -2,7 +2,7 @@ package com.greenhub.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.greenhub.models.*;
-import com.greenhub.models.SkyscannerResponse.FlightResponse;
+import com.greenhub.models.apis.plane.PlaneTrips;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -10,8 +10,6 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.WebClient;
 
-import java.time.Duration;
-import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -59,7 +57,7 @@ public class PlaneService {
                     .block(); // Bloquer jusqu'à ce que la réponse soit récupérée (à utiliser judicieusement dans un environnement réactif)
 
 
-            FlightResponse flightResponse = objectMapper.readValue(planeApiJSON, FlightResponse.class);
+            PlaneTrips flightResponse = objectMapper.readValue(planeApiJSON, PlaneTrips.class);
             ModeOfTransport plane = new Plane();
             int distance = (int) DistanceCalculator.calculateDistance(origin,destination);
 

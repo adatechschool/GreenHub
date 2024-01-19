@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.greenhub.models.City;
 import com.greenhub.models.Trip;
-import com.greenhub.models.train.TrainTrips;
+import com.greenhub.models.apis.train.TrainTrips;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

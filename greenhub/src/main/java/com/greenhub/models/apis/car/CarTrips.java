@@ -1,4 +1,4 @@
-package com.greenhub.models.car;
+package com.greenhub.models.apis.car;
 
 import java.util.ArrayList;
 

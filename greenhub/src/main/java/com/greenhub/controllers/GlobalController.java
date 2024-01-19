@@ -39,17 +39,18 @@ public class GlobalController {
 
     @GetMapping("/test")
     public ArrayList<GlobalTravelOption> getBestOption() {
-        int maxTravelTime = 240;
-        Travelers traveler1 = new Travelers("Nantais", buildCityFromString("Nantes,47.2176116889171,-1.5412401068009252,NTE"), 2, maxTravelTime, 1000);
-        Travelers traveler2 = new Travelers("Lyonnais", buildCityFromString("Lyon,45.76606462763691,4.83272363442929,LYS"), 2, maxTravelTime, 1000);
+        int maxTravelTime = 300;
+        Travelers traveler1 = new Travelers("Nantais", buildCityFromString("Nantes,47.2176116889171,-1.5412401068009252,NTE"), 4, maxTravelTime, 1000);
+        Travelers traveler2 = new Travelers("Lyonnais", buildCityFromString("Lyon,45.76606462763691,4.83272363442929,LYS"), 5, maxTravelTime, 1000);
         Travelers traveler3 = new Travelers("Parisiens", buildCityFromString("Paris,48.84110341748926,2.3220227046059105,CDG"), 2, maxTravelTime, 1000);
         Travelers traveler4 = new Travelers("Bordelais", buildCityFromString("Bordeaux,44.82529325038888,-0.5562017943285817,BOD"), 2, maxTravelTime, 1000);
-        Travelers traveler5 = new Travelers("Toulousains", buildCityFromString("Toulouse,43.61133885593007,1.4543164961156636,TLS"), 2, maxTravelTime, 1000);
+        Travelers traveler5 = new Travelers("Toulousains", buildCityFromString("Toulouse,43.61133885593007,1.4543164961156636,TLS"), 3, maxTravelTime, 1000);
         Travelers traveler6 = new Travelers("Marseillais", buildCityFromString("Marseille,43.4392719243989,5.221409633226013,MRS"), 2, maxTravelTime, 1000);
         Travelers traveler7 = new Travelers("Lillois", buildCityFromString("Lille,50.5639523849716,3.087746987915039,LTQ"), 2, maxTravelTime, 1000);
         Travelers traveler8 = new Travelers("Strasbourgeois", buildCityFromString("Strasbourg,48.539425,7.627089,STR"), 2, maxTravelTime, 1000);
+        Travelers traveler9 = new Travelers("Brestois", buildCityFromString("Brest,48.447856, -4.418694,BES"), 2, maxTravelTime, 1000);
 
-        Travelers[] groupOfTravelers = {traveler1, traveler2, traveler5, traveler6};
+        Travelers[] groupOfTravelers = {traveler1, traveler9, traveler6, traveler8};
         City[] destinations = CityLoader.loadCitiesFromCSV("/Users/mehdigrimault/Desktop/Ada/FakeGreenGo/greenhub/src/main/java/com/greenhub/repository/cities.csv");
         ArrayList<Trip> allTrips = new ArrayList<>();
         for (Travelers traveler : groupOfTravelers) {
