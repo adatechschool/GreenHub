@@ -1,6 +1,7 @@
 package com.greenhub;
 
 import com.greenhub.models.*;
+import com.greenhub.services.CarService;
 import org.springframework.stereotype.Component;
 import org.springframework.boot.CommandLineRunner;
 import java.util.ArrayList;
@@ -163,6 +164,11 @@ public class Main implements CommandLineRunner {
     public void run(String... args) throws Exception {
         GlobalTravelOption bestTravelOption = getLowestCO2Option(groupOfTravelers);
         bestTravelOption.print();
+
+        //test
+        System.out.print("test");
+        CarService carService = new CarService();
+        carService.getCarTrip("-1.5427562403976707,47.215594893836716","2.3208076325309848, 48.842281481558445");
     }
 
 

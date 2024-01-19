@@ -14,12 +14,17 @@ public class CarController {
     private final CarService carService;
 
     @Autowired // annotation enabling injecting dependencies
-    public CarController(CarController carController) {
+    public CarController(CarService carService) {
         this.carService = carService;
     }
 
     @GetMapping("/carTrip")
-    public Trip fetchDataFromApi (@RequestParam String departureGPSCoordinates, @RequestParam String arrivalGPSCoordinates) {
+    public String fetchDataFromApi (@RequestParam String departureGPSCoordinates, @RequestParam String arrivalGPSCoordinates) {
         return carService.getCarTrip(departureGPSCoordinates,arrivalGPSCoordinates);
     }
+    /* public Trip fetchDataFromApi (@RequestParam String departureGPSCoordinates, @RequestParam String arrivalGPSCoordinates) {
+        return carService.getCarTrip(departureGPSCoordinates,arrivalGPSCoordinates);
+    }
+
+     */
 }
