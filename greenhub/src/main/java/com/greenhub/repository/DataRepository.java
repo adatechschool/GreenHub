@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class DataRepository {
-
     public static City nantes = new City("Nantes", 0, 0);
     public static City lyon = new City("Lyon", 0, 0);
     public static City paris = new City("Paris", 0, 0);
@@ -156,5 +155,4 @@ public class DataRepository {
     public static Travelers traveler5 = new Travelers("Toulousains", toulouse, 3, maxTravelTime, 1000);
 
     public static Travelers[] groupOfTravelers = {traveler1, traveler2, traveler3, traveler4, traveler5};
-
 }
