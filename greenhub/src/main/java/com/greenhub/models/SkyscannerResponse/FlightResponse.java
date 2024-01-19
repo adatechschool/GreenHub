@@ -1,6 +1,6 @@
 package com.greenhub.models.SkyscannerResponse;
 
-public class Root{
+public class FlightResponse{
     public Content content;
 
     public static class Content{
