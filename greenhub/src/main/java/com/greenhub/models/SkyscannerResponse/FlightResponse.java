@@ -1,18 +1,18 @@
 package com.greenhub.models.SkyscannerResponse;
 
-public class FlightResponse{
+public class FlightResponse {
     public Content content;
 
     public static class Content{
         public Stats stats;
-        public class Stats{
+        public static class Stats{
             public Itineraries itineraries;
 
-            public class Itineraries{
+            public static class Itineraries{
                 public int minDuration;
 
                 public int getMinDuration() {
-                    return minDuration;
+                    return this.minDuration;
                 }
             }
         }
