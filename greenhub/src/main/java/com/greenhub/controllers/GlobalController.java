@@ -44,7 +44,7 @@ public class GlobalController {
         Travelers traveler4 = new Travelers("Bordelais", buildCityFromString("Bordeaux,44.82529325038888,-0.5562017943285817,BOD"), 2, maxTravelTime, 1000);
         Travelers traveler5 = new Travelers("Toulousains", buildCityFromString("Toulouse,43.61133885593007,1.4543164961156636,TLS"), 3, maxTravelTime, 1000);
 
-        Travelers[] groupOfTravelers = {traveler1, traveler2, traveler3, traveler4, traveler5};
+        Travelers[] groupOfTravelers = {traveler1, traveler2, traveler4, traveler5};
         City[] destinations = CityLoader.loadCitiesFromCSV("/Users/mehdigrimault/Desktop/Ada/FakeGreenGo/greenhub/src/main/java/com/greenhub/repository/cities.csv");
         ArrayList<Trip> allTrips = new ArrayList<>();
         for (Travelers traveler : groupOfTravelers) {

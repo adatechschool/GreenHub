@@ -37,6 +37,7 @@ public class TrainService {
         this.objectMapper = objectMapper;
     }
 
+
     public Trip getTrainTrip(City origin, City destination) throws JsonProcessingException {
         // Check if the origin and destination cities are the same
         if (origin.getName().equals(destination.getName())) {
@@ -47,7 +48,7 @@ public class TrainService {
         try {
             // Rest of your existing code to make the API call and process the response
             String trainApiJSON = trainApi.get()
-                    .uri("/journeys?from={origin}&to={destination}",
+                    .uri("/journeys?from={origin}&to={destination}&departure_date_time=20240223T160000",
                             origin.coordinatesAsString(), destination.coordinatesAsString())
                     .retrieve()
                     .bodyToMono(String.class)
@@ -68,12 +69,11 @@ public class TrainService {
                 throw new IllegalStateException("API response could not be parsed.");
             }
 
-            ModeOfTransport train = new Train();
             return new Trip(
                     origin,
                     destination,
                     Math.round((float) apiResponse.getJourneys().get(0).totalDistance() / 1000),
-                    train,
+                    new Train(),
                     apiResponse.getJourneys().get(0).getDuration() / 60,
                     0,
                     (int) apiResponse.getJourneys().get(0).getCo2_emission().getValue()
