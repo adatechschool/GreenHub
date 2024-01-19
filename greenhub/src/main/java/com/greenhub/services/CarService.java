@@ -54,7 +54,7 @@ public class CarService {
                     car,
                     apiResponse.features.get(0).properties.segments.get(0).getDuration(),
                     0,
-                    distance*car.getCO2PerKilometer(),
+                    distance*car.getCO2PerKilometer()
                     );
 
         } catch (JsonProcessingException e) {
