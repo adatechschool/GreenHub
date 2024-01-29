@@ -49,7 +49,8 @@ public class TravelOption {
                 System.out.println("Départ : " + trip.getDepartureCity().getName());
                 System.out.println("Arrivée : " + trip.getArrivalCity().getName());
                 System.out.println("Distance : " + trip.getDistance());
-                System.out.println("CO2 généré (en kg): " + this.getCO2());
+                System.out.println("CO2 généré (en kg): " + this.getCO2()/1000);
+                System.out.println("Durée du trajet : " + trip.getTravelTime()/60 + "h" + trip.getTravelTime()%60);
                 System.out.println("Mode de transport : " + trip.getModeOfTransport().getTransportName());
                 System.out.println("-----");
             }

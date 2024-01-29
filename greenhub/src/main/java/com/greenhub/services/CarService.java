@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.greenhub.models.City;
 import com.greenhub.models.Car;
+import com.greenhub.models.Train;
 import com.greenhub.models.Trip;
 import com.greenhub.models.apis.car.CarTrips;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +36,11 @@ public class CarService {
     }
 
     public Trip getCarTrip(City origin, City destination) {
-
+        // Check if the origin and destination cities are the same
+        if (origin.getName().equals(destination.getName())) {
+            // If they are the same, return a Trip object with values set to 0
+            return new Trip(origin, destination, 0, new Car(), 0, 0, 0);
+        }
         try {
             //consume the api
             String carApiJSON = carApi.get()

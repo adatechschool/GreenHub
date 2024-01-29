@@ -46,7 +46,7 @@ public class TrainService {
         try {
             // Rest of your existing code to make the API call and process the response
             String trainApiJSON = trainApi.get()
-                    .uri("/journeys?from={origin}&to={destination}&departure_date_time=20240223T160000",
+                    .uri("/journeys?from={origin}&to={destination}&departure_date_time=20240308T170000",
                             origin.coordinatesAsString(), destination.coordinatesAsString())
                     .retrieve()
                     .bodyToMono(String.class)

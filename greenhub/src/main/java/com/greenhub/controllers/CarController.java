@@ -1,7 +1,7 @@
 package com.greenhub.controllers;
 import com.greenhub.models.City;
 import com.greenhub.models.Trip;
-import com.greenhub.repository.CityLoader;
+import com.greenhub.services.CityLoader;
 import com.greenhub.services.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

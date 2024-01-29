@@ -1,14 +1,11 @@
 package com.greenhub.models;
 
-public class Train implements ModeOfTransport{
-    private final String transportName = "Train";
-    private final int CO2EmissionPerKilometer = 4;
-
-    public String getTransportName() {
-        return this.transportName;
+public class Train extends  AbstractModeOfTransport{
+    public int overtime () {
+        return 0;
+    }
+    public Train(){
+        super("Train", 4);
     }
 
-    public int getCO2PerKilometer() {
-        return this.CO2EmissionPerKilometer;
-    }
 }

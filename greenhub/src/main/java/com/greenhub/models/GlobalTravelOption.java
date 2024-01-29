@@ -29,8 +29,8 @@ public class GlobalTravelOption {
     }
 
     public void print() {
-        System.out.println("Pour minimiser l'empreinte carbone du groupe, il faudrait aller à : " + this.getDestination());
-        System.out.println("CO2 généré au total (en kg): " + this.getCO2Quantity());
+        System.out.println("Ville: " + this.getDestination());
+        System.out.println("CO2 généré au total (en kg): " + this.getCO2Quantity()/1000);
         System.out.println("Détails de l'option de voyage pour tous les voyageurs:");
         for (TravelOption travelOption : this.globalTravelOption) {
            travelOption.print();

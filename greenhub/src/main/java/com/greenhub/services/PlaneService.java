@@ -46,7 +46,7 @@ public class PlaneService {
             String destinationIata = destination.getIataCode();
 
             // Construire le corps de la requête avec les variables
-            String requestBody = String.format("{ \"query\": { \"market\": \"FR\", \"locale\": \"fr-FR\", \"currency\": \"EUR\", \"queryLegs\": [{ \"originPlaceId\": { \"iata\": \"%s\" }, \"destinationPlaceId\": { \"iata\": \"%s\" }, \"date\": { \"year\": 2024, \"month\": 2, \"day\": 23 } }], \"adults\": 1, \"childrenAges\": [], \"cabinClass\": \"CABIN_CLASS_ECONOMY\", \"excludedAgentsIds\": [], \"excludedCarriersIds\": [], \"includedAgentsIds\": [], \"includedCarriersIds\": [], \"includeSustainabilityData\": true, \"nearbyAirports\": false } }", originIata, destinationIata);
+            String requestBody = String.format("{ \"query\": { \"market\": \"FR\", \"locale\": \"fr-FR\", \"currency\": \"EUR\", \"queryLegs\": [{ \"originPlaceId\": { \"iata\": \"%s\" }, \"destinationPlaceId\": { \"iata\": \"%s\" }, \"date\": { \"year\": 2024, \"month\": 3, \"day\": 8 } }], \"adults\": 1, \"childrenAges\": [], \"cabinClass\": \"CABIN_CLASS_ECONOMY\", \"excludedAgentsIds\": [], \"excludedCarriersIds\": [], \"includedAgentsIds\": [], \"includedCarriersIds\": [], \"includeSustainabilityData\": true, \"nearbyAirports\": false } }", originIata, destinationIata);
 
             // Effectuer la requête POST avec WebClient
             String planeApiJSON = planeApi.post()
@@ -60,7 +60,9 @@ public class PlaneService {
             PlaneTrips flightResponse = objectMapper.readValue(planeApiJSON, PlaneTrips.class);
             ModeOfTransport plane = new Plane();
             int distance = (int) DistanceCalculator.calculateDistance(origin,destination);
-
+            if (flightResponse.content.stats.itineraries.getMinDuration() == 0) {
+                return null;
+            }
             return new Trip(
                     origin,
                     destination,

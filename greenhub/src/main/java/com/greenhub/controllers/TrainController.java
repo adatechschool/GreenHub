@@ -3,7 +3,7 @@ package com.greenhub.controllers;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.greenhub.models.City;
 import com.greenhub.models.Trip;
-import com.greenhub.repository.CityLoader;
+import com.greenhub.services.CityLoader;
 import com.greenhub.services.TrainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -37,7 +37,7 @@ public class TrainController {
     }
 
     private City buildCityFromCoordinates(String coordinates) {
-        String[] values = coordinates.split(";");
+        String[] values = coordinates.split(",");
         String cityName = values[0];
         float cityX = Float.parseFloat(values[1]);
         float cityY = Float.parseFloat(values[2]);

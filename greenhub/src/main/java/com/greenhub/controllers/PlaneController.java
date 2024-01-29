@@ -3,7 +3,7 @@ package com.greenhub.controllers;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.greenhub.models.City;
 import com.greenhub.models.Trip;
-import com.greenhub.repository.CityLoader;
+import com.greenhub.services.CityLoader;
 import com.greenhub.services.PlaneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

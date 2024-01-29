@@ -19,19 +19,7 @@ public class Trip {
         this.arrivalCity = arrivalCity;
         this.distance = distance;
         this.modeOfTransport = modeOfTransport;
-        switch(this.modeOfTransport.getTransportName()) {
-            case "Train":
-                this.travelTime = travelTime;
-                break;
-            case "Plane":
-                this.travelTime = travelTime + 120;
-                break;
-            case "Car":
-                this.travelTime = travelTime;
-                break;
-            default:
-                System.out.println("Not a valid mode of transport");
-        }
+        this.travelTime = travelTime + modeOfTransport.overtime();
         this.budgetPerPerson = budgetPerPerson;
         this.co2 = co2;
     }
@@ -43,19 +31,7 @@ public class Trip {
         this.arrivalCity = arrivalCity;
         this.distance = distance;
         this.modeOfTransport = modeOfTransport;
-        switch(this.modeOfTransport.getTransportName()) {
-            case "Train":
-                this.travelTime = travelTime + 45;
-                break;
-            case "Plane":
-                this.travelTime = travelTime + 90;
-                break;
-            case "Car":
-                this.travelTime = travelTime;
-                break;
-            default:
-                System.out.println("Not a valid mode of transport");
-        }
+        this.travelTime = travelTime + modeOfTransport.overtime();
         this.budgetPerPerson = budgetPerPerson;
         this.co2 = Math.round(this.distance * this.modeOfTransport.getCO2PerKilometer() / 1000);
     }
