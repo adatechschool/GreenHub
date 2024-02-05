@@ -2,6 +2,7 @@ package com.greenhub.models;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class TravelOption {
     private Travelers traveler;
@@ -27,7 +28,7 @@ public class TravelOption {
     }
 
     public int getCO2() {
-        if (trip.getModeOfTransport().getTransportName() == "Car"){
+        if (Objects.equals(trip.getModeOfTransport().getTransportName(), "Car")){
             return trip.getCo2();
         }
             return trip.getCo2()*traveler.getNumberOfTravelers();
@@ -54,6 +55,24 @@ public class TravelOption {
                 System.out.println("Mode de transport : " + trip.getModeOfTransport().getTransportName());
                 System.out.println("-----");
             }
+    }
+
+    public String printToString() {
+        StringBuilder result = new StringBuilder();
+        result.append("Détails de l'option de voyage :\n");
+        for (Map.Entry<Travelers, Trip> entry : this.getTravelOption().entrySet()) {
+            Travelers traveler = entry.getKey();
+            Trip trip = entry.getValue();
+            result.append("Voyageur : ").append(traveler.getName()).append("\n");
+            result.append("Départ : ").append(trip.getDepartureCity().getName()).append("\n");
+            result.append("Arrivée : ").append(trip.getArrivalCity().getName()).append("\n");
+            result.append("Distance : ").append(trip.getDistance()).append("\n");
+            result.append("CO2 généré (en kg): ").append(this.getCO2() / 1000).append("\n");
+            result.append("Durée du trajet : ").append(trip.getTravelTime() / 60).append("h").append(trip.getTravelTime() % 60).append("\n");
+            result.append("Mode de transport : ").append(trip.getModeOfTransport().getTransportName()).append("\n");
+            result.append("-----\n");
+        }
+        return result.toString();
     }
 
 }

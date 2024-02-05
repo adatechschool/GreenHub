@@ -49,8 +49,20 @@ public class CarService {
                     .bodyToMono(String.class)
                     .block();
 
+            // Check if the API response is null
+            if (carApiJSON == null) {
+                // Handle the case where the API response is null (throw an exception, log an error, etc.)
+                throw new IllegalStateException("API response is null.");
+            }
+
             // read the carApiJSON response and serialize it into a CarTrips object
             CarTrips apiResponse = objectMapper.readValue(carApiJSON,CarTrips.class);
+
+            // Check if apiResponse is null
+            if (apiResponse == null) {
+                // Handle the case where apiResponse is null (throw an exception, log an error, etc.)
+                throw new IllegalStateException("API response could not be parsed.");
+            }
 
             int distance = apiResponse.features.get(0).properties.segments.get(0).getDistance()/1000;
             Car car = new Car();

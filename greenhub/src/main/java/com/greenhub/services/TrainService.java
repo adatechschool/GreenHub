@@ -38,7 +38,7 @@ public class TrainService {
 
     public Trip getTrainTrip(City origin, City destination) throws JsonProcessingException {
         // Check if the origin and destination cities are the same
-        if (origin.getName().equals(destination.getName())) {
+        if (Objects.equals(origin.getName(), destination.getName())) {
             // If they are the same, return a Trip object with values set to 0
             return new Trip(origin, destination, 0, new Train(), 0, 0, 0);
         }
@@ -46,7 +46,7 @@ public class TrainService {
         try {
             // Rest of your existing code to make the API call and process the response
             String trainApiJSON = trainApi.get()
-                    .uri("/journeys?from={origin}&to={destination}&departure_date_time=20240308T170000",
+                    .uri("/journeys?from={origin}&to={destination}",
                             origin.coordinatesAsString(), destination.coordinatesAsString())
                     .retrieve()
                     .bodyToMono(String.class)
