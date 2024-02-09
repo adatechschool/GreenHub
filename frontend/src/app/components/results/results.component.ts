@@ -4,6 +4,7 @@ import { GlobalTravelOption } from '../../models/travel-option.model';
 import { GlobalTravelOptionComponent } from '../global-travel-option/global-travel-option.component';
 import { FormService } from '../../services/form-service.component';
 import { OnInit } from '@angular/core';
+import { ResultsService } from '../../services/results.service';
 
 @Component({
   selector: 'app-results',
@@ -25,9 +26,11 @@ import { OnInit } from '@angular/core';
 export class ResultsComponent implements OnInit {
   globalTravelOptions: GlobalTravelOption[] = [];
 
-  constructor(private formService: FormService) { }
+  constructor(private resultService: ResultsService) { }
 
   ngOnInit() {
-    this.globalTravelOptions = this.formService.getGlobalTravelOptions();
+    this.resultService.globalTravelOptions$.subscribe(options => {
+      this.globalTravelOptions = options;
+    });
   }
 }

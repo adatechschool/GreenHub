@@ -3,8 +3,20 @@ import { Traveler, City, GlobalTravelOption } from '../../models/travel-option.m
 import { CityService } from '../../services/city-service.component';
 import { FormService } from '../../services/form-service.component';
 import { Router } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { ResultsService } from '../../services/results.service';
 
 @Component({
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule,
+    RouterModule,
+    HttpClientModule
+  ],
   selector: 'app-travel-form', 
   templateUrl: './travel-form.component.html',
   styleUrls: ['./travel-form.component.css']
@@ -25,6 +37,7 @@ export class TravelFormComponent implements OnInit {
   constructor(
     private cityService: CityService,
     private formService: FormService,
+    private resultsService: ResultsService,
     private router: Router
   ) {}
 
@@ -51,7 +64,7 @@ export class TravelFormComponent implements OnInit {
     
 this.formService.submitForm(formData).subscribe(
   (response: GlobalTravelOption[]) => {
-    this.globalTravelOptions = response;
+    this.resultsService.setGlobalTravelOptions(response); 
 
     this.router.navigate(['/results']); // 3. Use this.router.navigate
   },

@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TravelFormModule } from '../travel-form/travel-form.module';
+import { TravelFormComponent } from '../travel-form/travel-form.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     CommonModule,
-    TravelFormModule
+    TravelFormComponent
     ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
