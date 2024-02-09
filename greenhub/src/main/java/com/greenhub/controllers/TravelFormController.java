@@ -5,54 +5,51 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.greenhub.models.*;
 import com.greenhub.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
+
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping("/api/travel")
-public class TravelController {
+@RequestMapping("/api")
+public class TravelFormController {
 
     private final PlaneService planeService;
     private final TrainService trainService;
     private final CarService carService;
 
     @Autowired
-    public TravelController(PlaneService planeService, TrainService trainService, CarService carService) {
+    public TravelFormController(PlaneService planeService, TrainService trainService, CarService carService) {
         this.planeService = planeService;
         this.trainService = trainService;
         this.carService = carService;
     }
 
+    @PostMapping("/post")
+    public ArrayList<GlobalTravelOption> createTravelers(@RequestBody TravelForm[] travelForms) throws JsonProcessingException {
 
-    @GetMapping("/test")
-    public ArrayList<GlobalTravelOption> getBestOption() throws JsonProcessingException {
-        int maxTravelTime = 270;
-        Travelers nantais1 = new Travelers("Lolo/Med/Dorniol", buildCityFromString("Nantes,47.2176116889171,-1.5412401068009252,NTE"), 4, maxTravelTime, 1000);
-        Travelers nantais2 = new Travelers("Anast/Guitouf", buildCityFromString("Nantes,47.2176116889171,-1.5412401068009252,NTE"), 3, maxTravelTime, 1000);
-        Travelers lyonnais = new Travelers("Mel/Raf/Anaïs/Raf", buildCityFromString("Lyon,45.76606462763691,4.83272363442929,LYS"), 5, maxTravelTime, 1000);
-        Travelers parisiens = new Travelers("Camille/Titi", buildCityFromString("Paris,48.84110341748926,2.3220227046059105,CDG"), 2, maxTravelTime, 1000);
-        Travelers bordelais = new Travelers("Anaïs/Michel", buildCityFromString("Bordeaux,44.82529325038888,-0.5562017943285817,BOD"), 2, maxTravelTime, 1000);
-        Travelers toulousains = new Travelers("Helo/Alex", buildCityFromString("Toulouse,43.61133885593007,1.4543164961156636,TLS"), 3, maxTravelTime, 1000);
-        Travelers marseillais = new Travelers("Marseillais", buildCityFromString("Marseille,43.4392719243989,5.221409633226013,MRS"), 2, maxTravelTime, 1000);
-        Travelers lillois = new Travelers("Lillois", buildCityFromString("Lille,50.5639523849716,3.087746987915039,LTQ"), 2, maxTravelTime, 1000);
-        Travelers strasbourgeois = new Travelers("Strasbourgeois", buildCityFromString("Strasbourg,48.539425,7.627089,STR"), 2, maxTravelTime, 1000);
-        Travelers brestois = new Travelers("Brestois", buildCityFromString("Brest,48.447856, -4.418694,BES"), 2, maxTravelTime, 1000);
-        Travelers aixois = new Travelers("Yas/JB", buildCityFromString("Aix-en-Provence,43.45639769931911, 5.316033170203662,MRS"), 3, maxTravelTime, 1000);
-        Travelers compiégnois = new Travelers("Sonia/Axel", buildCityFromString("Compiègne,49.4175, 2.826389,CDG"), 3, maxTravelTime, 1000);
-        Travelers toto = new Travelers("Toto", buildCityFromString("Reims,49.258329, 4.031696,CDG"), 1, maxTravelTime, 1000);
-        Travelers pedro = new Travelers("Pedro", buildCityFromString("Paris,48.84110341748926,2.3220227046059105,CDG"), 1, maxTravelTime, 1000);
-        Travelers mehdi = new Travelers("Mehdi", buildCityFromString("Nantes,47.2176116889171,-1.5412401068009252,NTE"), 1, maxTravelTime, 1000);
-        Travelers nantes = new Travelers("Nantes", buildCityFromString("Nantes,47.2176116889171,-1.5412401068009252,NTE"), 1, maxTravelTime, 1000);
-        Travelers dijon = new Travelers("Dijon", buildCityFromString("Dijon,47.32301605689184,5.027142558968659,DIJ"), 1, maxTravelTime, 1000);
-        Travelers perpignan = new Travelers("Perpignan", buildCityFromString("Perpignan,42.696697424153996,2.8802255331151128,PGF"), 1, maxTravelTime, 1000);
-        Travelers hamburg = new Travelers("Hambourg", buildCityFromString("Hambourg,53.553224146546064,9.953874351168654,HAM"), 2, maxTravelTime, 1000);
+        ArrayList<Travelers> travelers = new ArrayList<>();
+        int maxTravelTime = 300;
 
-        Travelers[] copainsDuLycee = {mehdi, pedro, toto};
-        Travelers[] copainsDuG7 = {nantais1, nantais2, compiégnois, aixois};
-        Travelers[] copainsDuBresil = {nantais1, lyonnais, toulousains, bordelais};
-        Travelers[] copainsdeValentin = {nantes, perpignan, dijon};
+        for (TravelForm travelForm : travelForms) {
+            City city = new City(
+                    travelForm.getLivingCityName(),
+                    travelForm.getLivingCityX(),
+                    travelForm.getLivingCityY(),
+                    travelForm.getLivingCityIataCode()
+            );
+
+            Travelers traveler = new Travelers(
+                    travelForm.getName(),
+                    city,
+                    travelForm.getNumberOfTravelers(),
+                    travelForm.getMaxTravelTime(),
+                    travelForm.getMaxBudgetPerPerson()
+            );
+
+            travelers.add(traveler);
+        }
 
         City[] destinations = CityLoader.loadCitiesFromCSV("/Users/mehdigrimault/Desktop/Ada/FakeGreenGo/greenhub/src/main/java/com/greenhub/repository/cities.csv");
 
@@ -60,7 +57,7 @@ public class TravelController {
         for (City destination : destinations) {
             boolean destinationHasOption = true;
 
-            for (Travelers traveler : copainsDuBresil) {
+            for (Travelers traveler : travelers) {
                 if (destinationHasOption) {
                     // call to train service
                     Trip trainTrip = trainService.getTrainTrip(traveler.getLivingCity(), destination);
@@ -118,7 +115,7 @@ public class TravelController {
 
         }
 
-        ArrayList<GlobalTravelOption> bestOptions = BestTravelOptionService.getLowestCo2Option(copainsDuBresil, destinations, allTrips);
+        ArrayList<GlobalTravelOption> bestOptions = BestTravelOptionService.getLowestCo2Option(travelers, destinations, allTrips);
 
         // Afficher les informations sur les meilleures options dans la console
         System.out.println("Top 5 meilleures destinations :");
@@ -139,8 +136,8 @@ public class TravelController {
         }
 
         return bestOptions;
-    }
 
+    }
 
     private City buildCityFromString(String string) {
         String[] values = string.split(",");

@@ -1,0 +1,20 @@
+.container {
+    max-width: 800px; /* Largeur maximale du contenu */
+    margin: 40px auto; /* Centrage horizontal */
+    padding: 20px; /* Espacement intérieur */
+  }
+  
+  .container h1 {
+    font-size: 2rem; /* Taille de la police pour le titre principal */
+    margin-bottom: 20px; /* Marge en bas du titre */
+    text-align: center; /* Centrer le texte */
+
+  }
+  
+  .container p {
+    font-size: 1.2rem; /* Taille de la police pour le paragraphe */
+    line-height: 1.5; /* Hauteur de ligne pour améliorer la lisibilité */
+    margin-bottom: 20px; /* Marge en bas du paragraphe */
+    text-align: center; /* Centrer le texte */
+
+  }

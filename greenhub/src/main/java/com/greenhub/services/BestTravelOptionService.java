@@ -9,7 +9,7 @@ import java.util.Collections;
 @Service
 public class BestTravelOptionService {
 
-    public static ArrayList<GlobalTravelOption> getLowestCo2Option(Travelers[] groupOfTravelers, City[] destinations, ArrayList<Trip> allTrips) {
+    public static ArrayList<GlobalTravelOption> getLowestCo2Option(ArrayList<Travelers> groupOfTravelers, City[] destinations, ArrayList<Trip> allTrips) {
         //create an arrayList to store the best options for each destination
         ArrayList<GlobalTravelOption> possibleOptions = new ArrayList<>();
         for (City destination : destinations) {

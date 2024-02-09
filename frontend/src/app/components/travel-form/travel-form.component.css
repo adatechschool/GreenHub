@@ -1,0 +1,102 @@
+/* Style pour le formulaire */
+form {
+    width: 100%;
+    max-width: 800px;
+    /* Ajustez la largeur maximale selon vos préférences */
+    margin: 40px auto;
+    padding: 10px;
+    background-color: #f7f7f7;
+    /* Couleur de fond */
+    border-radius: 10px;
+}
+
+/* Style pour chaque ligne de voyageur */
+.traveler-row {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    flex-direction: row;
+    justify-content: flex-start; /* Alignement à gauche */
+}
+
+.input-group {
+    margin-top: 10px;
+    /* Marge entre chaque groupe */
+}
+
+/* Style pour les labels */
+label {
+    display: block;
+    /* Pour que les labels soient sur une ligne séparée */
+}
+
+/* Style pour les champs de saisie */
+input[type="text"],
+input[type="number"],
+select {
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    /* Couleur de fond */
+}
+
+/* Style pour les boutons "Supprimer le voyageur" */
+.remove-button {
+    background-color: #f44336;
+    /* Rouge */
+    color: #fff;
+    /* Texte blanc */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+/* Style pour les boutons "Supprimer le voyageur" au survol */
+.remove-button:hover {
+    background-color: #d32f2f;
+    /* Rouge légèrement plus foncé */
+}
+
+/* Style pour le bouton "Ajouter voyageur" */
+.add-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Style pour le bouton "Ajouter voyageur" au survol */
+.add-button:hover {
+    background-color: #45a049;
+    /* Vert légèrement plus foncé */
+}
+
+/* Style pour le bouton "Soumettre" */
+.submit-button {
+    background-color: #4caf50;
+    /* Vert */
+    color: #fff;
+    /* Texte blanc */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-left: 700px;
+}
+
+/* Style pour le bouton "Soumettre" au survol */
+.submit-button:hover {
+    background-color: #45a049;
+    /* Vert légèrement plus foncé */
+}

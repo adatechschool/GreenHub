@@ -1,0 +1,58 @@
+/* global-travel-option.component.css */
+.global-travel-option {
+  display: flex; /* Utilisation de flexbox */
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 350px;;
+}
+.city-image-container {
+  position: relative;;
+  flex: 1; /* L'image occupera 50% de l'espace */
+  max-width: 400px; /* Ajusté pour une image plus grande */
+  margin-right: 20px; /* Espacement entre l'image et les informations de voyage */
+  margin-bottom: 20px; /* Espacement du bas */
+}
+
+.city-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.city-name {
+  font-size: 32px; /* Ajusté pour une taille de police plus grande */
+  font-weight: bold;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.co2-quantity {
+  font-size: 14px; /* Ajusté pour une taille de police plus petite */
+  text-align: center;
+  margin-top: 10px; /* Espacement du haut */
+}
+
+.travel-info {
+  flex: 1; /* Pour que la section des informations de voyage occupe tout l'espace restant */
+}
+
+.travel-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.travel-options {
+  display: flex; /* Pour aligner les travel-options horizontalement */
+}
+
+.travel-options app-travel-option {
+  margin-right: 30px; /* Espacement entre les travel-options */
+}

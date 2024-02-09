@@ -1,0 +1,25 @@
+<form (ngSubmit)="submitForm()">
+    <div *ngFor="let traveler of travelers; let i = index" class="traveler-row">
+      <div class="input-group">
+        <label for="name{{i}}">Nom</label>
+        <input type="text" id="name{{i}}" name="name{{i}}" [(ngModel)]="traveler.name" required>
+      </div>
+  
+      <div class="input-group">
+        <label for="city{{i}}">Ville</label>
+        <select id="city{{i}}" name="city{{i}}" [(ngModel)]="traveler.livingCity" required>
+          <option *ngFor="let city of cities" [ngValue]="city">{{ city.name }}</option>
+        </select>
+      </div>
+  
+      <div class="input-group">
+        <label for="numberOfTravelers{{i}}">Nombre de voyageurs</label>
+        <input type="number" id="numberOfTravelers{{i}}" name="numberOfTravelers{{i}}" [(ngModel)]="traveler.numberOfTravelers" required>
+      </div>
+  
+      <button type="button" class="remove-button" (click)="removeTraveler(i)">Supprimer voyageur</button>
+    </div>
+  
+    <button type="button" class="add-button" (click)="addTraveler()">Ajouter voyageur</button>
+    <button type="submit" class="submit-button">Soumettre</button>
+</form>

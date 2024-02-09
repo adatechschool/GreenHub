@@ -1,0 +1,2956 @@
+{
+    "results": [
+        {
+            "globalTravelOption": [
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "numberOfTravelers": 4,
+                        "name": "Lolo/Med/Dorniol"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "arrivalCity": {
+                            "name": "Limoges",
+                            "x": 45.83576,
+                            "y": 1.26816,
+                            "iataCode": "LIG"
+                        },
+                        "distance": 326,
+                        "travelTime": 248,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Car",
+                            "co2PerKilometer": 217
+                        },
+                        "co2": 70742
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 70742,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2d40f51": {
+                            "departureCity": {
+                                "name": "Nantes",
+                                "x": 47.217613,
+                                "y": -1.5412401,
+                                "iataCode": "NTE"
+                            },
+                            "arrivalCity": {
+                                "name": "Limoges",
+                                "x": 45.83576,
+                                "y": 1.26816,
+                                "iataCode": "LIG"
+                            },
+                            "distance": 326,
+                            "travelTime": 248,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Car",
+                                "co2PerKilometer": 217
+                            },
+                            "co2": 70742
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "numberOfTravelers": 5,
+                        "name": "Mel/Raf/Anaïs/Raf"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "arrivalCity": {
+                            "name": "Limoges",
+                            "x": 45.83576,
+                            "y": 1.26816,
+                            "iataCode": "LIG"
+                        },
+                        "distance": 409,
+                        "travelTime": 242,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Car",
+                            "co2PerKilometer": 217
+                        },
+                        "co2": 88753
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 88753,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@191ef51f": {
+                            "departureCity": {
+                                "name": "Lyon",
+                                "x": 45.766064,
+                                "y": 4.8327236,
+                                "iataCode": "LYS"
+                            },
+                            "arrivalCity": {
+                                "name": "Limoges",
+                                "x": 45.83576,
+                                "y": 1.26816,
+                                "iataCode": "LIG"
+                            },
+                            "distance": 409,
+                            "travelTime": 242,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Car",
+                                "co2PerKilometer": 217
+                            },
+                            "co2": 88753
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "numberOfTravelers": 3,
+                        "name": "Helo/Alex"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "arrivalCity": {
+                            "name": "Limoges",
+                            "x": 45.83576,
+                            "y": 1.26816,
+                            "iataCode": "LIG"
+                        },
+                        "distance": 260,
+                        "travelTime": 213,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 612
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 1836,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@9f999bc": {
+                            "departureCity": {
+                                "name": "Toulouse",
+                                "x": 43.61134,
+                                "y": 1.4543165,
+                                "iataCode": "TLS"
+                            },
+                            "arrivalCity": {
+                                "name": "Limoges",
+                                "x": 45.83576,
+                                "y": 1.26816,
+                                "iataCode": "LIG"
+                            },
+                            "distance": 260,
+                            "travelTime": 213,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 612
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "numberOfTravelers": 2,
+                        "name": "Anaïs/Michel"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "arrivalCity": {
+                            "name": "Limoges",
+                            "x": 45.83576,
+                            "y": 1.26816,
+                            "iataCode": "LIG"
+                        },
+                        "distance": 193,
+                        "travelTime": 147,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 2292
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 4584,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2732db5e": {
+                            "departureCity": {
+                                "name": "Bordeaux",
+                                "x": 44.825294,
+                                "y": -0.5562018,
+                                "iataCode": "BOD"
+                            },
+                            "arrivalCity": {
+                                "name": "Limoges",
+                                "x": 45.83576,
+                                "y": 1.26816,
+                                "iataCode": "LIG"
+                            },
+                            "distance": 193,
+                            "travelTime": 147,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 2292
+                        }
+                    }
+                }
+            ],
+            "destination": "Limoges",
+            "co2Quantity": 165915
+        },
+        {
+            "globalTravelOption": [
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "numberOfTravelers": 4,
+                        "name": "Lolo/Med/Dorniol"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "arrivalCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "distance": 294,
+                        "travelTime": 257,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 694
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 2776,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2d40f51": {
+                            "departureCity": {
+                                "name": "Nantes",
+                                "x": 47.217613,
+                                "y": -1.5412401,
+                                "iataCode": "NTE"
+                            },
+                            "arrivalCity": {
+                                "name": "Bordeaux",
+                                "x": 44.825294,
+                                "y": -0.5562018,
+                                "iataCode": "BOD"
+                            },
+                            "distance": 294,
+                            "travelTime": 257,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 694
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "numberOfTravelers": 5,
+                        "name": "Mel/Raf/Anaïs/Raf"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "arrivalCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "distance": 434,
+                        "travelTime": 70,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 123690
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 618450,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@191ef51f": {
+                            "departureCity": {
+                                "name": "Lyon",
+                                "x": 45.766064,
+                                "y": 4.8327236,
+                                "iataCode": "LYS"
+                            },
+                            "arrivalCity": {
+                                "name": "Bordeaux",
+                                "x": 44.825294,
+                                "y": -0.5562018,
+                                "iataCode": "BOD"
+                            },
+                            "distance": 434,
+                            "travelTime": 70,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 123690
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "numberOfTravelers": 3,
+                        "name": "Helo/Alex"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "arrivalCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "distance": 210,
+                        "travelTime": 130,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 494
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 1482,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@9f999bc": {
+                            "departureCity": {
+                                "name": "Toulouse",
+                                "x": 43.61134,
+                                "y": 1.4543165,
+                                "iataCode": "TLS"
+                            },
+                            "arrivalCity": {
+                                "name": "Bordeaux",
+                                "x": 44.825294,
+                                "y": -0.5562018,
+                                "iataCode": "BOD"
+                            },
+                            "distance": 210,
+                            "travelTime": 130,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 494
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "numberOfTravelers": 2,
+                        "name": "Anaïs/Michel"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "arrivalCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "distance": 0,
+                        "travelTime": 0,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 0
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 0,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2732db5e": {
+                            "departureCity": {
+                                "name": "Bordeaux",
+                                "x": 44.825294,
+                                "y": -0.5562018,
+                                "iataCode": "BOD"
+                            },
+                            "arrivalCity": {
+                                "name": "Bordeaux",
+                                "x": 44.825294,
+                                "y": -0.5562018,
+                                "iataCode": "BOD"
+                            },
+                            "distance": 0,
+                            "travelTime": 0,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 0
+                        }
+                    }
+                }
+            ],
+            "destination": "Bordeaux",
+            "co2Quantity": 622708
+        },
+        {
+            "globalTravelOption": [
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "numberOfTravelers": 4,
+                        "name": "Lolo/Med/Dorniol"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "arrivalCity": {
+                            "name": "LaRochelle",
+                            "x": 46.152515,
+                            "y": -1.1451601,
+                            "iataCode": "LRH"
+                        },
+                        "distance": 127,
+                        "travelTime": 108,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 299
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 1196,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2d40f51": {
+                            "departureCity": {
+                                "name": "Nantes",
+                                "x": 47.217613,
+                                "y": -1.5412401,
+                                "iataCode": "NTE"
+                            },
+                            "arrivalCity": {
+                                "name": "LaRochelle",
+                                "x": 46.152515,
+                                "y": -1.1451601,
+                                "iataCode": "LRH"
+                            },
+                            "distance": 127,
+                            "travelTime": 108,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 299
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "numberOfTravelers": 5,
+                        "name": "Mel/Raf/Anaïs/Raf"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "arrivalCity": {
+                            "name": "LaRochelle",
+                            "x": 46.152515,
+                            "y": -1.1451601,
+                            "iataCode": "LRH"
+                        },
+                        "distance": 463,
+                        "travelTime": 85,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 131955
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 659775,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@191ef51f": {
+                            "departureCity": {
+                                "name": "Lyon",
+                                "x": 45.766064,
+                                "y": 4.8327236,
+                                "iataCode": "LYS"
+                            },
+                            "arrivalCity": {
+                                "name": "LaRochelle",
+                                "x": 46.152515,
+                                "y": -1.1451601,
+                                "iataCode": "LRH"
+                            },
+                            "distance": 463,
+                            "travelTime": 85,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 131955
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "numberOfTravelers": 3,
+                        "name": "Helo/Alex"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "arrivalCity": {
+                            "name": "LaRochelle",
+                            "x": 46.152515,
+                            "y": -1.1451601,
+                            "iataCode": "LRH"
+                        },
+                        "distance": 422,
+                        "travelTime": 243,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Car",
+                            "co2PerKilometer": 217
+                        },
+                        "co2": 91574
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 91574,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@9f999bc": {
+                            "departureCity": {
+                                "name": "Toulouse",
+                                "x": 43.61134,
+                                "y": 1.4543165,
+                                "iataCode": "TLS"
+                            },
+                            "arrivalCity": {
+                                "name": "LaRochelle",
+                                "x": 46.152515,
+                                "y": -1.1451601,
+                                "iataCode": "LRH"
+                            },
+                            "distance": 422,
+                            "travelTime": 243,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Car",
+                                "co2PerKilometer": 217
+                            },
+                            "co2": 91574
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "numberOfTravelers": 2,
+                        "name": "Anaïs/Michel"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "arrivalCity": {
+                            "name": "LaRochelle",
+                            "x": 46.152515,
+                            "y": -1.1451601,
+                            "iataCode": "LRH"
+                        },
+                        "distance": 170,
+                        "travelTime": 161,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 2022
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 4044,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2732db5e": {
+                            "departureCity": {
+                                "name": "Bordeaux",
+                                "x": 44.825294,
+                                "y": -0.5562018,
+                                "iataCode": "BOD"
+                            },
+                            "arrivalCity": {
+                                "name": "LaRochelle",
+                                "x": 46.152515,
+                                "y": -1.1451601,
+                                "iataCode": "LRH"
+                            },
+                            "distance": 170,
+                            "travelTime": 161,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 2022
+                        }
+                    }
+                }
+            ],
+            "destination": "LaRochelle",
+            "co2Quantity": 756589
+        },
+        {
+            "globalTravelOption": [
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "numberOfTravelers": 4,
+                        "name": "Lolo/Med/Dorniol"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "arrivalCity": {
+                            "name": "Montpellier",
+                            "x": 43.611,
+                            "y": 3.8767,
+                            "iataCode": "MPL"
+                        },
+                        "distance": 582,
+                        "travelTime": 80,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 165870
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 663480,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2d40f51": {
+                            "departureCity": {
+                                "name": "Nantes",
+                                "x": 47.217613,
+                                "y": -1.5412401,
+                                "iataCode": "NTE"
+                            },
+                            "arrivalCity": {
+                                "name": "Montpellier",
+                                "x": 43.611,
+                                "y": 3.8767,
+                                "iataCode": "MPL"
+                            },
+                            "distance": 582,
+                            "travelTime": 80,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 165870
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "numberOfTravelers": 5,
+                        "name": "Mel/Raf/Anaïs/Raf"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "arrivalCity": {
+                            "name": "Montpellier",
+                            "x": 43.611,
+                            "y": 3.8767,
+                            "iataCode": "MPL"
+                        },
+                        "distance": 304,
+                        "travelTime": 188,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Car",
+                            "co2PerKilometer": 217
+                        },
+                        "co2": 65968
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 65968,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@191ef51f": {
+                            "departureCity": {
+                                "name": "Lyon",
+                                "x": 45.766064,
+                                "y": 4.8327236,
+                                "iataCode": "LYS"
+                            },
+                            "arrivalCity": {
+                                "name": "Montpellier",
+                                "x": 43.611,
+                                "y": 3.8767,
+                                "iataCode": "MPL"
+                            },
+                            "distance": 304,
+                            "travelTime": 188,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Car",
+                                "co2PerKilometer": 217
+                            },
+                            "co2": 65968
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "numberOfTravelers": 3,
+                        "name": "Helo/Alex"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "arrivalCity": {
+                            "name": "Montpellier",
+                            "x": 43.611,
+                            "y": 3.8767,
+                            "iataCode": "MPL"
+                        },
+                        "distance": 226,
+                        "travelTime": 148,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 530
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 1590,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@9f999bc": {
+                            "departureCity": {
+                                "name": "Toulouse",
+                                "x": 43.61134,
+                                "y": 1.4543165,
+                                "iataCode": "TLS"
+                            },
+                            "arrivalCity": {
+                                "name": "Montpellier",
+                                "x": 43.611,
+                                "y": 3.8767,
+                                "iataCode": "MPL"
+                            },
+                            "distance": 226,
+                            "travelTime": 148,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 530
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "numberOfTravelers": 2,
+                        "name": "Anaïs/Michel"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "arrivalCity": {
+                            "name": "Montpellier",
+                            "x": 43.611,
+                            "y": 3.8767,
+                            "iataCode": "MPL"
+                        },
+                        "distance": 378,
+                        "travelTime": 225,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 107730
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 215460,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2732db5e": {
+                            "departureCity": {
+                                "name": "Bordeaux",
+                                "x": 44.825294,
+                                "y": -0.5562018,
+                                "iataCode": "BOD"
+                            },
+                            "arrivalCity": {
+                                "name": "Montpellier",
+                                "x": 43.611,
+                                "y": 3.8767,
+                                "iataCode": "MPL"
+                            },
+                            "distance": 378,
+                            "travelTime": 225,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 107730
+                        }
+                    }
+                }
+            ],
+            "destination": "Montpellier",
+            "co2Quantity": 946498
+        },
+        {
+            "globalTravelOption": [
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "numberOfTravelers": 4,
+                        "name": "Lolo/Med/Dorniol"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "arrivalCity": {
+                            "name": "Marseille",
+                            "x": 43.304638,
+                            "y": 5.3805876,
+                            "iataCode": "MRS"
+                        },
+                        "distance": 694,
+                        "travelTime": 90,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 197790
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 791160,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2d40f51": {
+                            "departureCity": {
+                                "name": "Nantes",
+                                "x": 47.217613,
+                                "y": -1.5412401,
+                                "iataCode": "NTE"
+                            },
+                            "arrivalCity": {
+                                "name": "Marseille",
+                                "x": 43.304638,
+                                "y": 5.3805876,
+                                "iataCode": "MRS"
+                            },
+                            "distance": 694,
+                            "travelTime": 90,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 197790
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "numberOfTravelers": 5,
+                        "name": "Mel/Raf/Anaïs/Raf"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "arrivalCity": {
+                            "name": "Marseille",
+                            "x": 43.304638,
+                            "y": 5.3805876,
+                            "iataCode": "MRS"
+                        },
+                        "distance": 344,
+                        "travelTime": 217,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 1302
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 6510,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@191ef51f": {
+                            "departureCity": {
+                                "name": "Lyon",
+                                "x": 45.766064,
+                                "y": 4.8327236,
+                                "iataCode": "LYS"
+                            },
+                            "arrivalCity": {
+                                "name": "Marseille",
+                                "x": 43.304638,
+                                "y": 5.3805876,
+                                "iataCode": "MRS"
+                            },
+                            "distance": 344,
+                            "travelTime": 217,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 1302
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "numberOfTravelers": 3,
+                        "name": "Helo/Alex"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "arrivalCity": {
+                            "name": "Marseille",
+                            "x": 43.304638,
+                            "y": 5.3805876,
+                            "iataCode": "MRS"
+                        },
+                        "distance": 373,
+                        "travelTime": 238,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 878
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 2634,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@9f999bc": {
+                            "departureCity": {
+                                "name": "Toulouse",
+                                "x": 43.61134,
+                                "y": 1.4543165,
+                                "iataCode": "TLS"
+                            },
+                            "arrivalCity": {
+                                "name": "Marseille",
+                                "x": 43.304638,
+                                "y": 5.3805876,
+                                "iataCode": "MRS"
+                            },
+                            "distance": 373,
+                            "travelTime": 238,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 878
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "numberOfTravelers": 2,
+                        "name": "Anaïs/Michel"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "arrivalCity": {
+                            "name": "Marseille",
+                            "x": 43.304638,
+                            "y": 5.3805876,
+                            "iataCode": "MRS"
+                        },
+                        "distance": 503,
+                        "travelTime": 75,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 143355
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 286710,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2732db5e": {
+                            "departureCity": {
+                                "name": "Bordeaux",
+                                "x": 44.825294,
+                                "y": -0.5562018,
+                                "iataCode": "BOD"
+                            },
+                            "arrivalCity": {
+                                "name": "Marseille",
+                                "x": 43.304638,
+                                "y": 5.3805876,
+                                "iataCode": "MRS"
+                            },
+                            "distance": 503,
+                            "travelTime": 75,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 143355
+                        }
+                    }
+                }
+            ],
+            "destination": "Marseille",
+            "co2Quantity": 1087014
+        },
+        {
+            "globalTravelOption": [
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "numberOfTravelers": 4,
+                        "name": "Lolo/Med/Dorniol"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "arrivalCity": {
+                            "name": "Nantes",
+                            "x": 47.216454,
+                            "y": -1.5442302,
+                            "iataCode": "NTE"
+                        },
+                        "distance": 0,
+                        "travelTime": 0,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 0
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 0,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2d40f51": {
+                            "departureCity": {
+                                "name": "Nantes",
+                                "x": 47.217613,
+                                "y": -1.5412401,
+                                "iataCode": "NTE"
+                            },
+                            "arrivalCity": {
+                                "name": "Nantes",
+                                "x": 47.216454,
+                                "y": -1.5442302,
+                                "iataCode": "NTE"
+                            },
+                            "distance": 0,
+                            "travelTime": 0,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 0
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "numberOfTravelers": 5,
+                        "name": "Mel/Raf/Anaïs/Raf"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "arrivalCity": {
+                            "name": "Nantes",
+                            "x": 47.216454,
+                            "y": -1.5442302,
+                            "iataCode": "NTE"
+                        },
+                        "distance": 513,
+                        "travelTime": 80,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 146205
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 731025,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@191ef51f": {
+                            "departureCity": {
+                                "name": "Lyon",
+                                "x": 45.766064,
+                                "y": 4.8327236,
+                                "iataCode": "LYS"
+                            },
+                            "arrivalCity": {
+                                "name": "Nantes",
+                                "x": 47.216454,
+                                "y": -1.5442302,
+                                "iataCode": "NTE"
+                            },
+                            "distance": 513,
+                            "travelTime": 80,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 146205
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "numberOfTravelers": 3,
+                        "name": "Helo/Alex"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "arrivalCity": {
+                            "name": "Nantes",
+                            "x": 47.216454,
+                            "y": -1.5442302,
+                            "iataCode": "NTE"
+                        },
+                        "distance": 464,
+                        "travelTime": 70,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 132240
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 396720,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@9f999bc": {
+                            "departureCity": {
+                                "name": "Toulouse",
+                                "x": 43.61134,
+                                "y": 1.4543165,
+                                "iataCode": "TLS"
+                            },
+                            "arrivalCity": {
+                                "name": "Nantes",
+                                "x": 47.216454,
+                                "y": -1.5442302,
+                                "iataCode": "NTE"
+                            },
+                            "distance": 464,
+                            "travelTime": 70,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 132240
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "numberOfTravelers": 2,
+                        "name": "Anaïs/Michel"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "arrivalCity": {
+                            "name": "Nantes",
+                            "x": 47.216454,
+                            "y": -1.5442302,
+                            "iataCode": "NTE"
+                        },
+                        "distance": 839,
+                        "travelTime": 253,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 1980
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 3960,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2732db5e": {
+                            "departureCity": {
+                                "name": "Bordeaux",
+                                "x": 44.825294,
+                                "y": -0.5562018,
+                                "iataCode": "BOD"
+                            },
+                            "arrivalCity": {
+                                "name": "Nantes",
+                                "x": 47.216454,
+                                "y": -1.5442302,
+                                "iataCode": "NTE"
+                            },
+                            "distance": 839,
+                            "travelTime": 253,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 1980
+                        }
+                    }
+                }
+            ],
+            "destination": "Nantes",
+            "co2Quantity": 1131705
+        },
+        {
+            "globalTravelOption": [
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "numberOfTravelers": 4,
+                        "name": "Lolo/Med/Dorniol"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "arrivalCity": {
+                            "name": "Lyon",
+                            "x": 45.760674,
+                            "y": 4.8601694,
+                            "iataCode": "LYS"
+                        },
+                        "distance": 515,
+                        "travelTime": 70,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 146775
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 587100,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2d40f51": {
+                            "departureCity": {
+                                "name": "Nantes",
+                                "x": 47.217613,
+                                "y": -1.5412401,
+                                "iataCode": "NTE"
+                            },
+                            "arrivalCity": {
+                                "name": "Lyon",
+                                "x": 45.760674,
+                                "y": 4.8601694,
+                                "iataCode": "LYS"
+                            },
+                            "distance": 515,
+                            "travelTime": 70,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 146775
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "numberOfTravelers": 5,
+                        "name": "Mel/Raf/Anaïs/Raf"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "arrivalCity": {
+                            "name": "Lyon",
+                            "x": 45.760674,
+                            "y": 4.8601694,
+                            "iataCode": "LYS"
+                        },
+                        "distance": 0,
+                        "travelTime": 0,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 0
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 0,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@191ef51f": {
+                            "departureCity": {
+                                "name": "Lyon",
+                                "x": 45.766064,
+                                "y": 4.8327236,
+                                "iataCode": "LYS"
+                            },
+                            "arrivalCity": {
+                                "name": "Lyon",
+                                "x": 45.760674,
+                                "y": 4.8601694,
+                                "iataCode": "LYS"
+                            },
+                            "distance": 0,
+                            "travelTime": 0,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 0
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "numberOfTravelers": 3,
+                        "name": "Helo/Alex"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "arrivalCity": {
+                            "name": "Lyon",
+                            "x": 45.760674,
+                            "y": 4.8601694,
+                            "iataCode": "LYS"
+                        },
+                        "distance": 359,
+                        "travelTime": 60,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 102315
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 306945,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@9f999bc": {
+                            "departureCity": {
+                                "name": "Toulouse",
+                                "x": 43.61134,
+                                "y": 1.4543165,
+                                "iataCode": "TLS"
+                            },
+                            "arrivalCity": {
+                                "name": "Lyon",
+                                "x": 45.760674,
+                                "y": 4.8601694,
+                                "iataCode": "LYS"
+                            },
+                            "distance": 359,
+                            "travelTime": 60,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 102315
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "numberOfTravelers": 2,
+                        "name": "Anaïs/Michel"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "arrivalCity": {
+                            "name": "Lyon",
+                            "x": 45.760674,
+                            "y": 4.8601694,
+                            "iataCode": "LYS"
+                        },
+                        "distance": 436,
+                        "travelTime": 70,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 124260
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 248520,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2732db5e": {
+                            "departureCity": {
+                                "name": "Bordeaux",
+                                "x": 44.825294,
+                                "y": -0.5562018,
+                                "iataCode": "BOD"
+                            },
+                            "arrivalCity": {
+                                "name": "Lyon",
+                                "x": 45.760674,
+                                "y": 4.8601694,
+                                "iataCode": "LYS"
+                            },
+                            "distance": 436,
+                            "travelTime": 70,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 124260
+                        }
+                    }
+                }
+            ],
+            "destination": "Lyon",
+            "co2Quantity": 1142565
+        },
+        {
+            "globalTravelOption": [
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "numberOfTravelers": 4,
+                        "name": "Lolo/Med/Dorniol"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "arrivalCity": {
+                            "name": "Toulouse",
+                            "x": 43.60446,
+                            "y": 1.4442469,
+                            "iataCode": "TLS"
+                        },
+                        "distance": 464,
+                        "travelTime": 70,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 132240
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 528960,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2d40f51": {
+                            "departureCity": {
+                                "name": "Nantes",
+                                "x": 47.217613,
+                                "y": -1.5412401,
+                                "iataCode": "NTE"
+                            },
+                            "arrivalCity": {
+                                "name": "Toulouse",
+                                "x": 43.60446,
+                                "y": 1.4442469,
+                                "iataCode": "TLS"
+                            },
+                            "distance": 464,
+                            "travelTime": 70,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 132240
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "numberOfTravelers": 5,
+                        "name": "Mel/Raf/Anaïs/Raf"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "arrivalCity": {
+                            "name": "Toulouse",
+                            "x": 43.60446,
+                            "y": 1.4442469,
+                            "iataCode": "TLS"
+                        },
+                        "distance": 359,
+                        "travelTime": 65,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 102315
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 511575,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@191ef51f": {
+                            "departureCity": {
+                                "name": "Lyon",
+                                "x": 45.766064,
+                                "y": 4.8327236,
+                                "iataCode": "LYS"
+                            },
+                            "arrivalCity": {
+                                "name": "Toulouse",
+                                "x": 43.60446,
+                                "y": 1.4442469,
+                                "iataCode": "TLS"
+                            },
+                            "distance": 359,
+                            "travelTime": 65,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 102315
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "numberOfTravelers": 3,
+                        "name": "Helo/Alex"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "arrivalCity": {
+                            "name": "Toulouse",
+                            "x": 43.60446,
+                            "y": 1.4442469,
+                            "iataCode": "TLS"
+                        },
+                        "distance": 0,
+                        "travelTime": 0,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 0
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 0,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@9f999bc": {
+                            "departureCity": {
+                                "name": "Toulouse",
+                                "x": 43.61134,
+                                "y": 1.4543165,
+                                "iataCode": "TLS"
+                            },
+                            "arrivalCity": {
+                                "name": "Toulouse",
+                                "x": 43.60446,
+                                "y": 1.4442469,
+                                "iataCode": "TLS"
+                            },
+                            "distance": 0,
+                            "travelTime": 0,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 0
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "numberOfTravelers": 2,
+                        "name": "Anaïs/Michel"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "arrivalCity": {
+                            "name": "Toulouse",
+                            "x": 43.60446,
+                            "y": 1.4442469,
+                            "iataCode": "TLS"
+                        },
+                        "distance": 209,
+                        "travelTime": 190,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 59565
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 119130,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2732db5e": {
+                            "departureCity": {
+                                "name": "Bordeaux",
+                                "x": 44.825294,
+                                "y": -0.5562018,
+                                "iataCode": "BOD"
+                            },
+                            "arrivalCity": {
+                                "name": "Toulouse",
+                                "x": 43.60446,
+                                "y": 1.4442469,
+                                "iataCode": "TLS"
+                            },
+                            "distance": 209,
+                            "travelTime": 190,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 59565
+                        }
+                    }
+                }
+            ],
+            "destination": "Toulouse",
+            "co2Quantity": 1159665
+        },
+        {
+            "globalTravelOption": [
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "numberOfTravelers": 4,
+                        "name": "Lolo/Med/Dorniol"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "arrivalCity": {
+                            "name": "Pau",
+                            "x": 43.29193,
+                            "y": -0.36960378,
+                            "iataCode": "PUF"
+                        },
+                        "distance": 446,
+                        "travelTime": 220,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 127110
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 508440,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2d40f51": {
+                            "departureCity": {
+                                "name": "Nantes",
+                                "x": 47.217613,
+                                "y": -1.5412401,
+                                "iataCode": "NTE"
+                            },
+                            "arrivalCity": {
+                                "name": "Pau",
+                                "x": 43.29193,
+                                "y": -0.36960378,
+                                "iataCode": "PUF"
+                            },
+                            "distance": 446,
+                            "travelTime": 220,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 127110
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "numberOfTravelers": 5,
+                        "name": "Mel/Raf/Anaïs/Raf"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "arrivalCity": {
+                            "name": "Pau",
+                            "x": 43.29193,
+                            "y": -0.36960378,
+                            "iataCode": "PUF"
+                        },
+                        "distance": 495,
+                        "travelTime": 85,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 141075
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 705375,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@191ef51f": {
+                            "departureCity": {
+                                "name": "Lyon",
+                                "x": 45.766064,
+                                "y": 4.8327236,
+                                "iataCode": "LYS"
+                            },
+                            "arrivalCity": {
+                                "name": "Pau",
+                                "x": 43.29193,
+                                "y": -0.36960378,
+                                "iataCode": "PUF"
+                            },
+                            "distance": 495,
+                            "travelTime": 85,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 141075
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "numberOfTravelers": 3,
+                        "name": "Helo/Alex"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "arrivalCity": {
+                            "name": "Pau",
+                            "x": 43.29193,
+                            "y": -0.36960378,
+                            "iataCode": "PUF"
+                        },
+                        "distance": 189,
+                        "travelTime": 138,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 445
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 1335,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@9f999bc": {
+                            "departureCity": {
+                                "name": "Toulouse",
+                                "x": 43.61134,
+                                "y": 1.4543165,
+                                "iataCode": "TLS"
+                            },
+                            "arrivalCity": {
+                                "name": "Pau",
+                                "x": 43.29193,
+                                "y": -0.36960378,
+                                "iataCode": "PUF"
+                            },
+                            "distance": 189,
+                            "travelTime": 138,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 445
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "numberOfTravelers": 2,
+                        "name": "Anaïs/Michel"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "arrivalCity": {
+                            "name": "Pau",
+                            "x": 43.29193,
+                            "y": -0.36960378,
+                            "iataCode": "PUF"
+                        },
+                        "distance": 218,
+                        "travelTime": 234,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 19134
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 38268,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2732db5e": {
+                            "departureCity": {
+                                "name": "Bordeaux",
+                                "x": 44.825294,
+                                "y": -0.5562018,
+                                "iataCode": "BOD"
+                            },
+                            "arrivalCity": {
+                                "name": "Pau",
+                                "x": 43.29193,
+                                "y": -0.36960378,
+                                "iataCode": "PUF"
+                            },
+                            "distance": 218,
+                            "travelTime": 234,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 19134
+                        }
+                    }
+                }
+            ],
+            "destination": "Pau",
+            "co2Quantity": 1253418
+        },
+        {
+            "globalTravelOption": [
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "numberOfTravelers": 4,
+                        "name": "Lolo/Med/Dorniol"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "arrivalCity": {
+                            "name": "Rennes",
+                            "x": 48.103115,
+                            "y": -1.6728812,
+                            "iataCode": "RNS"
+                        },
+                        "distance": 99,
+                        "travelTime": 77,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 233
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 932,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2d40f51": {
+                            "departureCity": {
+                                "name": "Nantes",
+                                "x": 47.217613,
+                                "y": -1.5412401,
+                                "iataCode": "NTE"
+                            },
+                            "arrivalCity": {
+                                "name": "Rennes",
+                                "x": 48.103115,
+                                "y": -1.6728812,
+                                "iataCode": "RNS"
+                            },
+                            "distance": 99,
+                            "travelTime": 77,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 233
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "numberOfTravelers": 5,
+                        "name": "Mel/Raf/Anaïs/Raf"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "arrivalCity": {
+                            "name": "Rennes",
+                            "x": 48.103115,
+                            "y": -1.6728812,
+                            "iataCode": "RNS"
+                        },
+                        "distance": 557,
+                        "travelTime": 80,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 158745
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 793725,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@191ef51f": {
+                            "departureCity": {
+                                "name": "Lyon",
+                                "x": 45.766064,
+                                "y": 4.8327236,
+                                "iataCode": "LYS"
+                            },
+                            "arrivalCity": {
+                                "name": "Rennes",
+                                "x": 48.103115,
+                                "y": -1.6728812,
+                                "iataCode": "RNS"
+                            },
+                            "distance": 557,
+                            "travelTime": 80,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 158745
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "numberOfTravelers": 3,
+                        "name": "Helo/Alex"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "arrivalCity": {
+                            "name": "Rennes",
+                            "x": 48.103115,
+                            "y": -1.6728812,
+                            "iataCode": "RNS"
+                        },
+                        "distance": 554,
+                        "travelTime": 75,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 157890
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 473670,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@9f999bc": {
+                            "departureCity": {
+                                "name": "Toulouse",
+                                "x": 43.61134,
+                                "y": 1.4543165,
+                                "iataCode": "TLS"
+                            },
+                            "arrivalCity": {
+                                "name": "Rennes",
+                                "x": 48.103115,
+                                "y": -1.6728812,
+                                "iataCode": "RNS"
+                            },
+                            "distance": 554,
+                            "travelTime": 75,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 157890
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "numberOfTravelers": 2,
+                        "name": "Anaïs/Michel"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "arrivalCity": {
+                            "name": "Rennes",
+                            "x": 48.103115,
+                            "y": -1.6728812,
+                            "iataCode": "RNS"
+                        },
+                        "distance": 803,
+                        "travelTime": 221,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 1894
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 3788,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2732db5e": {
+                            "departureCity": {
+                                "name": "Bordeaux",
+                                "x": 44.825294,
+                                "y": -0.5562018,
+                                "iataCode": "BOD"
+                            },
+                            "arrivalCity": {
+                                "name": "Rennes",
+                                "x": 48.103115,
+                                "y": -1.6728812,
+                                "iataCode": "RNS"
+                            },
+                            "distance": 803,
+                            "travelTime": 221,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 1894
+                        }
+                    }
+                }
+            ],
+            "destination": "Rennes",
+            "co2Quantity": 1272115
+        },
+        {
+            "globalTravelOption": [
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "numberOfTravelers": 4,
+                        "name": "Lolo/Med/Dorniol"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "arrivalCity": {
+                            "name": "Brest",
+                            "x": 48.387928,
+                            "y": -4.479243,
+                            "iataCode": "BES"
+                        },
+                        "distance": 319,
+                        "travelTime": 265,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Train",
+                            "co2PerKilometer": 4
+                        },
+                        "co2": 752
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 3008,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2d40f51": {
+                            "departureCity": {
+                                "name": "Nantes",
+                                "x": 47.217613,
+                                "y": -1.5412401,
+                                "iataCode": "NTE"
+                            },
+                            "arrivalCity": {
+                                "name": "Brest",
+                                "x": 48.387928,
+                                "y": -4.479243,
+                                "iataCode": "BES"
+                            },
+                            "distance": 319,
+                            "travelTime": 265,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Train",
+                                "co2PerKilometer": 4
+                            },
+                            "co2": 752
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "numberOfTravelers": 5,
+                        "name": "Mel/Raf/Anaïs/Raf"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "arrivalCity": {
+                            "name": "Brest",
+                            "x": 48.387928,
+                            "y": -4.479243,
+                            "iataCode": "BES"
+                        },
+                        "distance": 762,
+                        "travelTime": 95,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 217170
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 1085850,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@191ef51f": {
+                            "departureCity": {
+                                "name": "Lyon",
+                                "x": 45.766064,
+                                "y": 4.8327236,
+                                "iataCode": "LYS"
+                            },
+                            "arrivalCity": {
+                                "name": "Brest",
+                                "x": 48.387928,
+                                "y": -4.479243,
+                                "iataCode": "BES"
+                            },
+                            "distance": 762,
+                            "travelTime": 95,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 217170
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "numberOfTravelers": 3,
+                        "name": "Helo/Alex"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "arrivalCity": {
+                            "name": "Brest",
+                            "x": 48.387928,
+                            "y": -4.479243,
+                            "iataCode": "BES"
+                        },
+                        "distance": 701,
+                        "travelTime": 230,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 199785
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 599355,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@9f999bc": {
+                            "departureCity": {
+                                "name": "Toulouse",
+                                "x": 43.61134,
+                                "y": 1.4543165,
+                                "iataCode": "TLS"
+                            },
+                            "arrivalCity": {
+                                "name": "Brest",
+                                "x": 48.387928,
+                                "y": -4.479243,
+                                "iataCode": "BES"
+                            },
+                            "distance": 701,
+                            "travelTime": 230,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 199785
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "numberOfTravelers": 2,
+                        "name": "Anaïs/Michel"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "arrivalCity": {
+                            "name": "Brest",
+                            "x": 48.387928,
+                            "y": -4.479243,
+                            "iataCode": "BES"
+                        },
+                        "distance": 496,
+                        "travelTime": 85,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 141360
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 282720,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2732db5e": {
+                            "departureCity": {
+                                "name": "Bordeaux",
+                                "x": 44.825294,
+                                "y": -0.5562018,
+                                "iataCode": "BOD"
+                            },
+                            "arrivalCity": {
+                                "name": "Brest",
+                                "x": 48.387928,
+                                "y": -4.479243,
+                                "iataCode": "BES"
+                            },
+                            "distance": 496,
+                            "travelTime": 85,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 141360
+                        }
+                    }
+                }
+            ],
+            "destination": "Brest",
+            "co2Quantity": 1970933
+        },
+        {
+            "globalTravelOption": [
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "numberOfTravelers": 4,
+                        "name": "Lolo/Med/Dorniol"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Nantes",
+                            "x": 47.217613,
+                            "y": -1.5412401,
+                            "iataCode": "NTE"
+                        },
+                        "arrivalCity": {
+                            "name": "Lille",
+                            "x": 50.639175,
+                            "y": 3.0763338,
+                            "iataCode": "LIL"
+                        },
+                        "distance": 508,
+                        "travelTime": 245,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 144780
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 579120,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2d40f51": {
+                            "departureCity": {
+                                "name": "Nantes",
+                                "x": 47.217613,
+                                "y": -1.5412401,
+                                "iataCode": "NTE"
+                            },
+                            "arrivalCity": {
+                                "name": "Lille",
+                                "x": 50.639175,
+                                "y": 3.0763338,
+                                "iataCode": "LIL"
+                            },
+                            "distance": 508,
+                            "travelTime": 245,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 144780
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "numberOfTravelers": 5,
+                        "name": "Mel/Raf/Anaïs/Raf"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Lyon",
+                            "x": 45.766064,
+                            "y": 4.8327236,
+                            "iataCode": "LYS"
+                        },
+                        "arrivalCity": {
+                            "name": "Lille",
+                            "x": 50.639175,
+                            "y": 3.0763338,
+                            "iataCode": "LIL"
+                        },
+                        "distance": 557,
+                        "travelTime": 265,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 158745
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 793725,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@191ef51f": {
+                            "departureCity": {
+                                "name": "Lyon",
+                                "x": 45.766064,
+                                "y": 4.8327236,
+                                "iataCode": "LYS"
+                            },
+                            "arrivalCity": {
+                                "name": "Lille",
+                                "x": 50.639175,
+                                "y": 3.0763338,
+                                "iataCode": "LIL"
+                            },
+                            "distance": 557,
+                            "travelTime": 265,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 158745
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "numberOfTravelers": 3,
+                        "name": "Helo/Alex"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Toulouse",
+                            "x": 43.61134,
+                            "y": 1.4543165,
+                            "iataCode": "TLS"
+                        },
+                        "arrivalCity": {
+                            "name": "Lille",
+                            "x": 50.639175,
+                            "y": 3.0763338,
+                            "iataCode": "LIL"
+                        },
+                        "distance": 790,
+                        "travelTime": 95,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 225150
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 675450,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@9f999bc": {
+                            "departureCity": {
+                                "name": "Toulouse",
+                                "x": 43.61134,
+                                "y": 1.4543165,
+                                "iataCode": "TLS"
+                            },
+                            "arrivalCity": {
+                                "name": "Lille",
+                                "x": 50.639175,
+                                "y": 3.0763338,
+                                "iataCode": "LIL"
+                            },
+                            "distance": 790,
+                            "travelTime": 95,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 225150
+                        }
+                    }
+                },
+                {
+                    "traveler": {
+                        "livingCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "numberOfTravelers": 2,
+                        "name": "Anaïs/Michel"
+                    },
+                    "trip": {
+                        "departureCity": {
+                            "name": "Bordeaux",
+                            "x": 44.825294,
+                            "y": -0.5562018,
+                            "iataCode": "BOD"
+                        },
+                        "arrivalCity": {
+                            "name": "Lille",
+                            "x": 50.639175,
+                            "y": 3.0763338,
+                            "iataCode": "LIL"
+                        },
+                        "distance": 701,
+                        "travelTime": 90,
+                        "budgetPerPerson": 0,
+                        "modeOfTransport": {
+                            "transportName": "Plane",
+                            "co2PerKilometer": 285
+                        },
+                        "co2": 199785
+                    },
+                    "budgetPerPerson": 0,
+                    "co2": 399570,
+                    "travelOption": {
+                        "com.greenhub.models.Travelers@2732db5e": {
+                            "departureCity": {
+                                "name": "Bordeaux",
+                                "x": 44.825294,
+                                "y": -0.5562018,
+                                "iataCode": "BOD"
+                            },
+                            "arrivalCity": {
+                                "name": "Lille",
+                                "x": 50.639175,
+                                "y": 3.0763338,
+                                "iataCode": "LIL"
+                            },
+                            "distance": 701,
+                            "travelTime": 90,
+                            "budgetPerPerson": 0,
+                            "modeOfTransport": {
+                                "transportName": "Plane",
+                                "co2PerKilometer": 285
+                            },
+                            "co2": 199785
+                        }
+                    }
+                }
+            ],
+            "destination": "Lille",
+            "co2Quantity": 2447865
+        }
+    ]
+}
