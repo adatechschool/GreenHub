@@ -1,38 +1,35 @@
 package com.greenhub.controllers;
 
 
-import ch.qos.logback.core.model.Model;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.greenhub.models.City;
-import com.greenhub.models.GlobalTravelOption;
-import com.greenhub.models.Travelers;
-import com.greenhub.models.Trip;
+import com.greenhub.models.*;
 import com.greenhub.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.ArrayList;
 
 @RestController
-@RequestMapping("/bestoption")
-public class GlobalController {
+@RequestMapping("/api/travel")
+public class TravelController {
 
     private final PlaneService planeService;
     private final TrainService trainService;
     private final CarService carService;
 
     @Autowired
-    public GlobalController(PlaneService planeService, TrainService trainService, CarService carService) {
+    public TravelController(PlaneService planeService, TrainService trainService, CarService carService) {
         this.planeService = planeService;
         this.trainService = trainService;
         this.carService = carService;
     }
 
+
     @GetMapping("/test")
     public ArrayList<GlobalTravelOption> getBestOption() throws JsonProcessingException {
-        int maxTravelTime = 330;
-        Travelers nantais1 = new Travelers("Lolo/Med/Dorniol", buildCityFromString("Nantes,47.2176116889171,-1.5412401068009252,NTE"), 3, maxTravelTime, 1000);
+        int maxTravelTime = 270;
+        Travelers nantais1 = new Travelers("Lolo/Med/Dorniol", buildCityFromString("Nantes,47.2176116889171,-1.5412401068009252,NTE"), 4, maxTravelTime, 1000);
         Travelers nantais2 = new Travelers("Anast/Guitouf", buildCityFromString("Nantes,47.2176116889171,-1.5412401068009252,NTE"), 3, maxTravelTime, 1000);
         Travelers lyonnais = new Travelers("Mel/Raf/Anaïs/Raf", buildCityFromString("Lyon,45.76606462763691,4.83272363442929,LYS"), 5, maxTravelTime, 1000);
         Travelers parisiens = new Travelers("Camille/Titi", buildCityFromString("Paris,48.84110341748926,2.3220227046059105,CDG"), 2, maxTravelTime, 1000);
@@ -54,7 +51,7 @@ public class GlobalController {
 
         Travelers[] copainsDuLycee = {mehdi, pedro, toto};
         Travelers[] copainsDuG7 = {nantais1, nantais2, compiégnois, aixois};
-        Travelers[] copainsDuBresil = {nantais1, lyonnais, toulousains, bordelais, hamburg};
+        Travelers[] copainsDuBresil = {nantais1, lyonnais, toulousains, bordelais};
         Travelers[] copainsdeValentin = {nantes, perpignan, dijon};
 
         City[] destinations = CityLoader.loadCitiesFromCSV("/Users/mehdigrimault/Desktop/Ada/FakeGreenGo/greenhub/src/main/java/com/greenhub/repository/cities.csv");
@@ -63,7 +60,7 @@ public class GlobalController {
         for (City destination : destinations) {
             boolean destinationHasOption = true;
 
-            for (Travelers traveler : copainsdeValentin) {
+            for (Travelers traveler : copainsDuBresil) {
                 if (destinationHasOption) {
                     // call to train service
                     Trip trainTrip = trainService.getTrainTrip(traveler.getLivingCity(), destination);
@@ -121,7 +118,7 @@ public class GlobalController {
 
         }
 
-        ArrayList<GlobalTravelOption> bestOptions = BestTravelOptionService.getLowestCo2Option(copainsdeValentin, destinations, allTrips);
+        ArrayList<GlobalTravelOption> bestOptions = BestTravelOptionService.getLowestCo2Option(copainsDuBresil, destinations, allTrips);
 
         // Afficher les informations sur les meilleures options dans la console
         System.out.println("Top 5 meilleures destinations :");
