@@ -37,17 +37,9 @@ public class GlobalTravelOption {
         }
     }
 
-    public String getFirstDepartureCity() {
-        return globalTravelOption.get(0).getTrip().getDepartureCity().getName();
-    }
-
-    public String getFirstArrivalCity() {
-        return globalTravelOption.get(0).getTrip().getArrivalCity().getName();
-    }
-
     public String printToString() {
         StringBuilder result = new StringBuilder();
-        result.append("Ville: ").append(this.getFirstArrivalCity()).append("\n");
+        result.append("Ville: ").append(globalTravelOption.get(0).getTrip().getArrivalCity().getName()).append("\n");
         result.append("CO2 généré au total (en kg): ").append(this.getCO2Quantity() / 1000).append("\n");
         result.append("Détails de l'option de voyage pour tous les voyageurs:\n");
         for (TravelOption travelOption : this.globalTravelOption) {

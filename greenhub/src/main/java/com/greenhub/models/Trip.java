@@ -57,6 +57,5 @@ public class Trip {
         return this.co2;
     };
 
-
 }
 

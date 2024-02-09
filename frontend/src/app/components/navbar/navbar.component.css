@@ -1,0 +1,28 @@
+/* Style de la barre de navigation */
+nav {
+    background-color: #4CAF50; /* Vert */
+    color: #fff; /* Texte blanc */
+    display: flex;
+    padding: 20px;
+  }
+  
+  /* Style du logo */
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Style des liens */
+  a {
+    margin-top: 5px;
+    margin-left: 30px;
+    color: #fff; /* Texte blanc */
+    text-decoration: none; /* Supprimer le soulignement par défaut des liens */
+    transition: color 0.3s ease; /* Transition douce pour la couleur du texte */
+  }
+  
+  /* Style des liens au survol */
+  a:hover {
+    color: #e0e0e0; /* Couleur du texte au survol */
+  }
+  
