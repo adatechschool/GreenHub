@@ -1,8 +1,24 @@
 .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 32px;
+    color: #008000; /* Vert foncé */
+    margin-bottom: 20px;
     text-align: center;
-    margin: 40px auto;
 }
 
 p {
-    margin-top: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#purpose {
+    font-weight: bold;
+    color: #008000; /* Vert foncé */
 }
