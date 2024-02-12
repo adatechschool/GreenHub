@@ -24,12 +24,13 @@ import { ResultsService } from '../../services/results.service';
 export class TravelFormComponent implements OnInit {
 
   globalTravelOptions: GlobalTravelOption[] = [];
+  maxTravelTime: number = 300; // Ajout de la propriété maxTravelTime
 
   travelers: Traveler[] = [{
     name: '',
     livingCity: { name: 'Sélectionnez une ville', x: 0, y: 0, iataCode: ' ' },
     numberOfTravelers: 1,
-    maxTravelTime: 300,
+    maxTravelTime: this.maxTravelTime, 
     maxBudgetPerPerson: 1000
   }];
   cities: City[] = [];
@@ -55,23 +56,21 @@ export class TravelFormComponent implements OnInit {
       livingCityY: traveler.livingCity.y,
       livingCityIataCode: traveler.livingCity.iataCode,
       numberOfTravelers: traveler.numberOfTravelers,
-      maxTravelTime: traveler.maxTravelTime,
+      maxTravelTime: this.maxTravelTime, // Utilisation de maxTravelTime global
       maxBudgetPerPerson: traveler.maxBudgetPerPerson
     }));
 
     console.log(formData);
 
-    
-this.formService.submitForm(formData).subscribe(
-  (response: GlobalTravelOption[]) => {
-    this.resultsService.setGlobalTravelOptions(response); 
-
-    this.router.navigate(['/results']); // 3. Use this.router.navigate
-  },
-  error => {
-    console.error('Erreur lors de l\'envoi de la requête :', error);
-  }
-);
+    this.formService.submitForm(formData).subscribe(
+      (response: GlobalTravelOption[]) => {
+        this.resultsService.setGlobalTravelOptions(response); 
+        this.router.navigate(['/results']); // Utilisation de this.router.navigate
+      },
+      error => {
+        console.error('Erreur lors de l\'envoi de la requête :', error);
+      }
+    );
   }
 
   addTraveler() {
@@ -80,7 +79,7 @@ this.formService.submitForm(formData).subscribe(
       name: '',
       livingCity: { name: 'Sélectionnez une ville', x: 0, y: 0, iataCode: ' ' },
       numberOfTravelers: 1,
-      maxTravelTime: 300,
+      maxTravelTime: this.maxTravelTime, 
       maxBudgetPerPerson: 1000
     });
   }
@@ -88,5 +87,4 @@ this.formService.submitForm(formData).subscribe(
   removeTraveler(index: number) {
     this.travelers.splice(index, 1);
   }
-
 }
