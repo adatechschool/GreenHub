@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GlobalTravelOption } from '../../models/travel-option.model';
 import { GlobalTravelOptionComponent } from '../global-travel-option/global-travel-option.component';
-import { FormService } from '../../services/form-service.component';
+import { FormService } from '../../services/form.service';
 import { OnInit } from '@angular/core';
 import { ResultsService } from '../../services/results.service';
 

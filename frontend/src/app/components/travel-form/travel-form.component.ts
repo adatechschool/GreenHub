@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Traveler, City, GlobalTravelOption } from '../../models/travel-option.model';
-import { CityService } from '../../services/city-service.component';
-import { FormService } from '../../services/form-service.component';
+import { CityService } from '../../services/city.service';
+import { FormService } from '../../services/form.service';
 import { Router } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';

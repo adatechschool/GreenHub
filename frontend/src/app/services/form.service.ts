@@ -14,10 +14,15 @@ export class FormService {
 
   constructor(private http: HttpClient) { }
 
- // Méthode pour envoyer les données du formulaire
- submitForm(formData: any): Observable<any> {
-  return this.http.post<any>(this.apiUrl, formData);
-}
+  // Méthode pour envoyer les données du formulaire
+  submitForm(formData: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl, formData).pipe(
+      catchError(error => {
+        // Gérer les erreurs ici si nécessaire
+        throw 'Erreur lors de l\'envoi des données du formulaire';
+      })
+    );
+  }
 
   setGlobalTravelOptions(options: GlobalTravelOption[]) {
     this.globalTravelOptions = options;
