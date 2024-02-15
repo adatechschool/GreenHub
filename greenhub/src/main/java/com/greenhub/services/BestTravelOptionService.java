@@ -12,6 +12,10 @@ public class BestTravelOptionService {
     public static ArrayList<GlobalTravelOption> getLowestCo2Option(ArrayList<Travelers> groupOfTravelers, City[] destinations, ArrayList<Trip> allTrips) {
         //create an arrayList to store the best options for each destination
         ArrayList<GlobalTravelOption> possibleOptions = new ArrayList<>();
+        //condition to return an empty array if one of the inputs is empty
+        if (groupOfTravelers.isEmpty() || destinations.length == 0 || allTrips.isEmpty()) {
+            return possibleOptions;
+        }
         for (City destination : destinations) {
             //Create an arraylist of travelOption which associate the travelers to a trip option
             ArrayList<TravelOption> bestOptionPerDestination = new ArrayList<>();

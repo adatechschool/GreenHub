@@ -61,7 +61,7 @@ public class TrainService {
             // Rest of your existing code to parse the API response and create a Trip object
             TrainTrips apiResponse = objectMapper.readValue(trainApiJSON, TrainTrips.class);
 
-            // Check if apiResponse is null
+            // Check if parsed response is null
             if (apiResponse == null) {
                 // Handle the case where apiResponse is null (throw an exception, log an error, etc.)
                 throw new IllegalStateException("API response could not be parsed.");
@@ -76,6 +76,8 @@ public class TrainService {
                     0,
                     (int) apiResponse.getJourneys().get(0).getCo2_emission().getValue()
             );
+        } catch (IllegalStateException e) {
+            throw e;
         } catch (Exception e) {
             return null;
         }

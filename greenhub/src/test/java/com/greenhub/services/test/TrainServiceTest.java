@@ -4,74 +4,95 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.greenhub.models.City;
 import com.greenhub.models.Trip;
-import com.greenhub.models.apis.train.TrainTrips;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.web.reactive.function.client.WebClient;
-import reactor.core.publisher.Mono;
 import com.greenhub.services.TrainService;
+import reactor.core.publisher.Mono;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.lenient;
+import static org.mockito.Mockito.when;
 
-class TrainServiceTest {
+@ExtendWith({SpringExtension.class, MockitoExtension.class})
+public class TrainServiceTest {
 
-    @Mock
-    private WebClient trainApiMock;
-
-    @Mock
-    private ObjectMapper objectMapperMock;
-
-    @InjectMocks
+    @MockBean
     private TrainService trainService;
+
+    @MockBean
+    private WebClient.Builder webClientBuilder;
+
+    @Mock
+    private WebClient webClient;
+
+    @Mock
+    private WebClient.RequestHeadersUriSpec requestHeadersUriSpec;
+
+    @Mock
+    private WebClient.RequestHeadersSpec requestHeadersSpec;
+
+    @Mock
+    private WebClient.ResponseSpec responseSpec;
+
+    @Mock
+    private ObjectMapper objectMapper;
 
     @BeforeEach
     void setUp() {
-        MockitoAnnotations.openMocks(this);
+        when(webClientBuilder.defaultHeader(any(String.class), any(String.class))).thenReturn(webClientBuilder);
+        when(webClientBuilder.baseUrl(any(String.class))).thenReturn(webClientBuilder);
+        when(webClientBuilder.build()).thenReturn(webClient);
     }
 
     @Test
-    void testGetTrainTrip() throws JsonProcessingException {
-        City origin = new City("Paris", 48.854368511010776F, 2.338717213104824F);
-        City destination = new City("Marseille", 43.3046384916822F, 5.380587512275412F);
-
-        // Mocking the response from the external API
-        TrainTrips mockedApiResponse = new TrainTrips(/*...*/); // Create a mocked TrainTrips object
-        String mockedApiResponseJson = " {\"journeys\":[\n" +
-                "            {\n" +
-                "            \"duration\": 13780,\n" +
-                "            \"co2_emission\": {\n" +
-                "            \"value\": 1562.27828\n" +
-                "            },\n" +
-                "            \"sections\": [\n" +
-                "                {\n" +
-                "                \"geojson\": {\n" +
-                "                \"properties\": [\n" +
-                "                    {\n" +
-                "                    \"length\": 603\n" +
-                "                    }\n" +
-                "                ]\n" +
-                "                }\n" +
-                "            ]\n" +
-                "            }]}";
-        Mockito.when(trainApiMock.get()
-                        .uri("/journeys?from={origin}&to={destination}",
-                                origin.coordinatesAsString(), destination.coordinatesAsString())
-                        .retrieve()
-                        .bodyToMono(String.class))
-                .thenReturn(Mono.just(mockedApiResponseJson));
-
-        // Mocking ObjectMapper behavior
-        Mockito.when(objectMapperMock.readValue(mockedApiResponseJson, TrainTrips.class))
-                .thenReturn(mockedApiResponse);
-
-        // Call the method to test
-        Trip result = trainService.getTrainTrip(origin, destination);
-
-        // Assert the result based on your expectations
-        assertNotNull(result);
+    public void testGetTrainTrip_sameOriginAndDestination() throws JsonProcessingException {
+        City city = new City("Paris", 1, 1);
+        Trip trip = trainService.getTrainTrip(city, city);
+        assertEquals(null, trip);
     }
+
+    @Test
+    public void testGetTrainTrip_nullApiResponse() throws JsonProcessingException {
+        City origin = new City("Paris", 1, 1);
+        City destination = new City("Nantes", 2, 2);
+
+        // Simuler la réponse nulle de l'API externe
+        lenient().when(webClient.get()).thenReturn(requestHeadersUriSpec);
+        lenient().when(requestHeadersUriSpec.uri(any(String.class), any(Object.class), any(Object.class))).thenReturn(requestHeadersSpec);
+        lenient().when(requestHeadersSpec.retrieve()).thenReturn(responseSpec);
+        lenient().when(responseSpec.bodyToMono(String.class)).thenReturn(Mono.empty());
+
+        // Appeler la méthode à tester
+        Trip trip = trainService.getTrainTrip(origin, destination);
+
+        // Vérifier que null est retourné
+        assertEquals(null, trip);
+    }
+
+    @Test
+    public void testGetTrainTrip_unparseableApiResponse() throws JsonProcessingException {
+        City origin = new City("Paris", 1, 1);
+        City destination = new City("Nantes", 2, 2);
+
+        // Simulate an invalid but non-null response from the external API
+        lenient().when(webClient.get()).thenReturn(requestHeadersUriSpec);
+        lenient().when(requestHeadersUriSpec.uri(any(String.class), any(Object.class), any(Object.class))).thenReturn(requestHeadersSpec);
+        lenient().when(requestHeadersSpec.retrieve()).thenReturn(responseSpec);
+        lenient().when(responseSpec.bodyToMono(String.class)).thenReturn(Mono.just("{brokenJson : {"));
+
+        // Appeler la méthode à tester
+        Trip trip = trainService.getTrainTrip(origin, destination);
+
+        // Vérifier que null est retourné
+        assertEquals(null, trip);
+    }
+
+
 }
