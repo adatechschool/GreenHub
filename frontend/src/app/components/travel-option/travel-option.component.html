@@ -1,0 +1,11 @@
+<div>
+    <h4>{{ travelOption.traveler.name }}</h4>
+    <ng-container *ngIf="travelOption.trip.departureCity.name === travelOption.trip.arrivalCity.name; else travelDetails">
+      <p>Même pas besoin de bouger !</p>
+    </ng-container>
+    <ng-template #travelDetails>
+        <p>Depuis {{travelOption.trip.departureCity.name}}</p>
+        <p>{{ formatTravelTime(travelOption.trip.travelTime) }} en {{ formatTransportName(travelOption.trip.modeOfTransport.transportName) }}</p>
+        <p>CO2 : {{ formatCO2Quantity(travelOption.trip.co2) }} kg</p>
+    </ng-template>
+  </div>

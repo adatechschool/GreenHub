@@ -8,18 +8,7 @@ import { TravelOption } from '../../models/travel-option.model';
   imports: [
     CommonModule
   ],
-  template: `
-  <div>
-  <h4>{{ travelOption.traveler.name }}</h4>
-  <ng-container *ngIf="travelOption.trip.departureCity.name === travelOption.trip.arrivalCity.name; else travelDetails">
-    <p>Même pas besoin de bouger !</p>
-  </ng-container>
-  <ng-template #travelDetails>
-    <p>{{ formatTravelTime(travelOption.trip.travelTime) }} en {{ formatTransportName(travelOption.trip.modeOfTransport.transportName) }}</p>
-    <p>CO2 : {{ formatCO2Quantity(travelOption.trip.co2) }} kg</p>
-  </ng-template>
-</div>
-  `,
+  templateUrl: './travel-option.component.html',
   styleUrls: ['./travel-option.component.css'],
 })
 export class TravelOptionComponent {
